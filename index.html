@@ -1,37 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Art Inspiration Daily</title>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Art Inspiration Daily — Saturday, February 28, 2026</title>
   <style>
-    :root {
-      --bg: #0d0d0d; --surface: #161616; --surface2: #1e1e1e;
-      --border: #2a2a2a; --accent: #e8c84a; --accent2: #c084fc;
-      --accent3: #38bdf8; --text: #f0f0f0; --muted: #888; --tag-bg: #262626;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { background: var(--bg); color: var(--text); font-family: 'Inter','Helvetica Neue',sans-serif; padding: 0 0 80px; }
-    header { border-bottom: 1px solid var(--border); padding: 32px 40px 24px; display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
-    header .logo { font-size: 11px; text-transform: uppercase; letter-spacing: 0.2em; color: var(--muted); margin-bottom: 6px; }
-    header h1 { font-size: clamp(28px,5vw,48px); font-weight: 700; letter-spacing: -0.03em; line-height: 1; }
-    header h1 span { color: var(--accent); }
-    .date-badge { background: var(--surface2); border: 1px solid var(--border); border-radius: 6px; padding: 8px 14px; font-size: 13px; color: var(--muted); white-space: nowrap; }
-    .container { max-width: 1100px; margin: 0 auto; padding: 48px 40px 0; }
-    .section-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.25em; color: var(--muted); margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
-    .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
-    .grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(320px,1fr)); gap: 20px; margin-bottom: 56px; }
-    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px; transition: border-color 0.2s,transform 0.2s; text-decoration: none; color: inherit; display: block; }
-    .card:hover { border-color: var(--accent); transform: translateY(-2px); }
-    .card-eyebrow { font-size: 10px; text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: 10px; }
-    .card h3 { font-size: 16px; font-weight: 600; line-height: 1.35; margin-bottom: 10px; letter-spacing: -0.01em; }
-    .card p { font-size: 13px; line-height: 1.65; color: #bbb; }
-    .source-link { display: inline-block; margin-top: 14px; font-size: 11px; color: var(--accent3); text-decoration: none; border-bottom: 1px solid transparent; transition: border-color 0.15s; }
-    .source-link:hover { border-color: var(--accent3); }
-    .pulse { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: #4ade80; margin-right: 6px; animation: pulse 2s infinite; }
-    @keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:0.3; } }
-    footer { text-align: center; margin-top: 64px; font-size: 12px; color: var(--muted); border-top: 1px solid var(--border); padding-top: 24px; }
-    @media(max-width:600px) { header,.container { padding-left:20px; padding-right:20px; } }
+    :root{--bg:#0d0d0d;--surface:#161616;--surface2:#1e1e1e;--border:#2a2a2a;--accent:#e8c84a;--text:#f0f0f0;--muted:#888;}
+    *{box-sizing:border-box;margin:0;padding:0;}
+    body{background:var(--bg);color:var(--text);font-family:'Inter','Helvetica Neue',sans-serif;padding:0 0 80px;}
+    header{border-bottom:1px solid var(--border);padding:32px 40px 24px;display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+    .logo{font-size:11px;text-transform:uppercase;letter-spacing:.2em;color:var(--muted);margin-bottom:6px;}
+    h1{font-size:clamp(26px,5vw,46px);font-weight:700;letter-spacing:-.03em;line-height:1;}
+    h1 span{color:var(--accent);}
+    .date-badge{background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:8px 14px;font-size:13px;color:var(--muted);white-space:nowrap;}
+    .container{max-width:1100px;margin:0 auto;padding:48px 40px 0;}
+    .section-label{font-size:10px;text-transform:uppercase;letter-spacing:.25em;color:var(--muted);margin-bottom:20px;display:flex;align-items:center;gap:10px;}
+    .section-label::after{content:'';flex:1;height:1px;background:var(--border);}
+    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px;margin-bottom:52px;}
+    .card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:22px;transition:border-color .2s,transform .2s;text-decoration:none;color:inherit;display:block;}
+    .card:hover{border-color:var(--accent);transform:translateY(-2px);}
+    .card-eyebrow{font-size:10px;text-transform:uppercase;letter-spacing:.2em;margin-bottom:8px;}
+    .card h3{font-size:15px;font-weight:600;line-height:1.35;margin-bottom:9px;letter-spacing:-.01em;}
+    .card p{font-size:13px;line-height:1.65;color:#aaa;}
+    .source-link{display:inline-block;margin-top:13px;font-size:11px;color:#38bdf8;text-decoration:none;border-bottom:1px solid transparent;transition:border-color .15s;}
+    .source-link:hover{border-color:#38bdf8;}
+    .pulse{display:inline-block;width:7px;height:7px;border-radius:50%;background:#4ade80;margin-right:6px;animation:pulse 2s infinite;}
+    @keyframes pulse{0%,100%{opacity:1;}50%{opacity:.3;}}
+    footer{text-align:center;margin-top:64px;font-size:12px;color:var(--muted);border-top:1px solid var(--border);padding-top:24px;}
+    @media(max-width:600px){header,.container{padding-left:20px;padding-right:20px;}}
   </style>
 </head>
 <body>
@@ -43,172 +39,265 @@
     <div class="date-badge"><span class="pulse"></span> Saturday, February 28, 2026</div>
   </header>
   <div class="container">
-
+    
     <div class="section-label">🤖 AI &amp; Generative Art</div>
     <div class="grid">
-      <a class="card" href="https://www.atlascloud.ai/id/blog/seedance-2-vs-sora-2-vs-kling-3-comparison" target="_blank" rel="noopener">
-        <div class="card-eyebrow" style="color:#e8c84a">AI Video</div>
-        <h3>Seedance 2.0 vs. Sora 2 vs. Kling 3.0: Ultimate AI Video API Comparison ...</h3>
-        <p>Feb 13, 2026 — Which AI video model is best? We compare ByteDance's Seedance 2.0, OpenAI's Sora 2.0, and Kuaishou's Kling 3.0 on features, pricing, ...</p>
-        <span class="source-link">www.atlascloud.ai ↗</span>
-      </a>
       <a class="card" href="https://www.youtube.com/watch?v=m6mV3LoiG-4" target="_blank" rel="noopener">
-        <div class="card-eyebrow" style="color:#e8c84a">AI Video</div>
+        <div class="card-eyebrow" style="color:#e8c84a">www.youtube.com</div>
         <h3>The BEST AI Video Generator 2026! Sora vs Veo vs Grok vs Kling!</h3>
         <p>Feb 13, 2026 ... Check Higgsfield AI right here https://higgsfield.ai/?utm_source=Versus We put the four biggest video AIs to the test: Sora 2 Pro vs Veo ...</p>
         <span class="source-link">www.youtube.com ↗</span>
       </a>
-      <a class="card" href="https://vertu.com/ai-tools/seedance-2-0-vs-kling-3-0-vs-sora-2-vs-veo-3-1-the-ultimate-ai-video-generation-guide/?srsltid=AfmBOorSGr__-6RRRFZY_2WX1tmaGTyNoFZzf77657zzsjuXyGvYypBT" target="_blank" rel="noopener">
-        <div class="card-eyebrow" style="color:#e8c84a">AI Video</div>
-        <h3>Best AI Video Generators 2026: Seedance 2.0 vs. Sora 2 vs. Kling ...</h3>
-        <p>Feb 9, 2026 — Which AI video tool is best in 2026? Compare Seedance 2.0's multimodal control, Sora 2's physics, Kling 3.0's motion, and Veo 3.1's cinema ...</p>
-        <span class="source-link">vertu.com ↗</span>
+      <a class="card" href="https://genra.ai/blog/top-6-ai-video-generators-2026" target="_blank" rel="noopener">
+        <div class="card-eyebrow" style="color:#e8c84a">genra.ai</div>
+        <h3>Top 6 AI Video Generators in 2026 (Feb Update)</h3>
+        <p>Feb 12, 2026 — In the span of 11 days, three major AI video models launched or upgraded: Kling 3.0 dropped on February 4, Seedance 2.0 followed on February 7, ...</p>
+        <span class="source-link">genra.ai ↗</span>
       </a>
-      <a class="card" href="https://wavespeed.ai/blog/posts/best-midjourney-alternative-2026" target="_blank" rel="noopener">
-        <div class="card-eyebrow" style="color:#e8c84a">AI Image</div>
-        <h3>Best Midjourney Alternative in 2026: WaveSpeedAI for AI Image ...</h3>
-        <p>Dec 27, 2025 ... Need a Midjourney alternative with API access? WaveSpeedAI offers 600+ models including Seedream 4.5 with full REST API for developers.</p>
-        <span class="source-link">wavespeed.ai ↗</span>
+      <a class="card" href="https://ulazai.com/ai-video-models-guide-2025/" target="_blank" rel="noopener">
+        <div class="card-eyebrow" style="color:#e8c84a">ulazai.com</div>
+        <h3>Best AI Video Generation Models (2026): Veo, Runway, Kling, Sora</h3>
+        <p>Limits and pricing change often; these pages focus on verification + practical testing. AI Video Generation in 2025: The NEW Era. 2025 marks a revolutionary ...</p>
+        <span class="source-link">ulazai.com ↗</span>
       </a>
-      <a class="card" href="https://aijourn.com/ai-image-generation-in-2026-why-multi-model-platforms-are-replacing-single-tool-workflows/" target="_blank" rel="noopener">
-        <div class="card-eyebrow" style="color:#e8c84a">AI Image</div>
-        <h3>AI Image Generation in 2026: Why Multi-Model Platforms Are ...</h3>
-        <p>Flux 2 leads in photorealism. ChatGPT's image generation dominates complex scene composition. SeeDream optimizes for speed. Nano Banana Pro ...</p>
-        <span class="source-link">aijourn.com ↗</span>
-      </a>
-      <a class="card" href="https://www.reddit.com/r/AIAssisted/comments/1ra2hx1/what_are_the_best_ai_image_generators_right_now/" target="_blank" rel="noopener">
-        <div class="card-eyebrow" style="color:#e8c84a">AI Image</div>
-        <h3>What are the best AI image generators right now? : r/AIAssisted</h3>
-        <p>Feb 20, 2026 ... Seedream + Flux for generation, agreed. But lately I've been more into AI editing than generating from scratch — bg removal, style transfer ...</p>
+      <a class="card" href="https://www.reddit.com/r/VEO3/comments/1rg48rv/sora_vs_seedance_vs_veo_vs_kling_same_prompt/" target="_blank" rel="noopener">
+        <div class="card-eyebrow" style="color:#e8c84a">www.reddit.com</div>
+        <h3>Sora vs Seedance vs Veo vs Kling - Same prompt - Runway Edition</h3>
+        <p>Prompt: Single continuous shot on a minimalist fashion catwalk, camera moving in a slow, perfectly stabilized forward dolly along the ...</p>
         <span class="source-link">www.reddit.com ↗</span>
       </a>
-      <a class="card" href="https://www.thepromptbuddy.com/prompts/top-10-ai-image-generation-models-dominating-january-2026" target="_blank" rel="noopener">
-        <div class="card-eyebrow" style="color:#e8c84a">AI Image</div>
-        <h3>Top 10 AI Image Generation Models Dominating January 2026</h3>
-        <p>Jan 2, 2026 ... Discover the top AI image generation models of January 2026. Compare Midjourney, FLUX, GPT Image, Adobe Firefly, and more to choose the best ...</p>
-        <span class="source-link">www.thepromptbuddy.com ↗</span>
+      <a class="card" href="https://opencreator.io/blog/ai-video-models-comparison-2026" target="_blank" rel="noopener">
+        <div class="card-eyebrow" style="color:#e8c84a">opencreator.io</div>
+        <h3>AI Video Models Comparison 2026: Seedance, Veo, Sora, Wan, Kling ...</h3>
+        <p>Feb 4, 2026 — A practical comparison of six mainstream AI video models based on real-world commercial testing—Seedance 1.5 Pro, Google Veo 3.1, Sora 2, ...</p>
+        <span class="source-link">opencreator.io ↗</span>
       </a>
-      <a class="card" href="https://www.creativebloq.com/art/digital-art/5-ai-free-apps-every-artist-needs-to-try-in-2026" target="_blank" rel="noopener">
-        <div class="card-eyebrow" style="color:#e8c84a">Generative</div>
-        <h3>5 AI-free apps every artist needs to try in 2026 - Creative Bloq</h3>
-        <p>Jan 17, 2026 ... ... tools to enhance workflow, not to generate new artwork. Clip Studio Paint does not have a generative AI image-creation feature; a planned ...</p>
-        <span class="source-link">www.creativebloq.com ↗</span>
+      <a class="card" href="https://www.abyssale.com/blog/best-ai-image-generator" target="_blank" rel="noopener">
+        <div class="card-eyebrow" style="color:#e8c84a">www.abyssale.com</div>
+        <h3>The 11 Best AI Image Generator Tools in 2026 for Stunning Visual Creations</h3>
+        <p>Feb 6, 2026 — Key Features: Multi-model image generation (Seedream, Flux, Z-Image Turbo, and Nano Banana Pro); Support 30+ art styles including cartoon ...</p>
+        <span class="source-link">www.abyssale.com ↗</span>
       </a>
-      <a class="card" href="https://www.cnet.com/tech/services-and-software/best-ai-image-generators/" target="_blank" rel="noopener">
-        <div class="card-eyebrow" style="color:#e8c84a">Generative</div>
-        <h3>Best AI Image Generators of 2026 - CNET</h3>
-        <p>Adobe Firefly's family of generative AI image tools is built directly into Adobe Creative ... Her work explores how new AI technology is infiltrating our ...</p>
-        <span class="source-link">www.cnet.com ↗</span>
+      <a class="card" href="https://www.template.net/business/best-ai-image-generators-in-2026/" target="_blank" rel="noopener">
+        <div class="card-eyebrow" style="color:#e8c84a">www.template.net</div>
+        <h3>Best AI Image Generators in 2026: Models, Tools & Use-Case</h3>
+        <p>Jan 13, 2026 ... Seedream 4.5 is ByteDance's latest flagship image generation ... Midjourney remains the creative benchmark for AI image generation in 2026.</p>
+        <span class="source-link">www.template.net ↗</span>
       </a>
-      <a class="card" href="https://scribe.com/library/generative-ai-tools" target="_blank" rel="noopener">
-        <div class="card-eyebrow" style="color:#e8c84a">Generative</div>
-        <h3>10 Best Generative AI Tools for Creative Work (2026) - Scribe</h3>
-        <p>February 22, 2026 ... Whether you're a developer, designer or artist, generative AI tools can enhance your productivity, boost your creativity and unlock new ...</p>
-        <span class="source-link">scribe.com ↗</span>
+      <a class="card" href="https://flux-ai.io/blog/detail/The-Flux-AI-Image-Generator-Guide-2026-Best-Models-Compared-How-to-Use-4279123214fd/" target="_blank" rel="noopener">
+        <div class="card-eyebrow" style="color:#e8c84a">flux-ai.io</div>
+        <h3>Flux AI Image Generator Guide 2026: Best Models Compared</h3>
+        <p>Jan 4, 2026 ... Nano Banana – balanced, high-quality, general-purpose generation; Seedream – expressive, stylized, and illustration-focused; Flux 2 – realism, ...</p>
+        <span class="source-link">flux-ai.io ↗</span>
+      </a>
+      <a class="card" href="https://overchat.ai/ai-hub/best-ai-image-generators" target="_blank" rel="noopener">
+        <div class="card-eyebrow" style="color:#e8c84a">overchat.ai</div>
+        <h3>Best AI Image Generators in 2025/2026 | AI Hub</h3>
+        <p>Nov 10, 2025 ... AI image generation has advanced rapidly over the past few years, driven by major breakthroughs in artificial intelligence technology.</p>
+        <span class="source-link">overchat.ai ↗</span>
+      </a>
+      <a class="card" href="https://www.aitoolssme.com/comparison/image-generators" target="_blank" rel="noopener">
+        <div class="card-eyebrow" style="color:#e8c84a">www.aitoolssme.com</div>
+        <h3>Best AI Image Generators For 2026 - Free & Paid</h3>
+        <p>AI image generation tools like Nano Banana Pro, Freepik, Kling, Flux, Adobe Fireflies, Midjourney, and ChatGPT image have been working madly on advancing ...</p>
+        <span class="source-link">www.aitoolssme.com ↗</span>
+      </a>
+      <a class="card" href="https://themesgrove.com/resources/generative-ai-tools/" target="_blank" rel="noopener">
+        <div class="card-eyebrow" style="color:#e8c84a">themesgrove.com</div>
+        <h3>Top 8 Generative AI Tools for Creatives in 2026 - ThemesGrove</h3>
+        <p>6 days ago — Ideation and exploration without replacing originality · Rapid drafting, iteration, and versioning · Quality control, human review, and final ...</p>
+        <span class="source-link">themesgrove.com ↗</span>
+      </a>
+      <a class="card" href="https://letsenhance.io/blog/article/benefits-of-ai-art-for-artists/" target="_blank" rel="noopener">
+        <div class="card-eyebrow" style="color:#e8c84a">letsenhance.io</div>
+        <h3>The Benefits of Generative AI for Artists: 2026 guide - Let's Enhance</h3>
+        <p>Jan 22, 2026 ... As an artist you can use generative AI to overcome creative blocks and find inspiration; · AI tools give access to abilities and functions for ...</p>
+        <span class="source-link">letsenhance.io ↗</span>
+      </a>
+      <a class="card" href="https://www.hp.com/us-en/shop/tech-takes/best-ai-creativity-tools-free-paid-2026" target="_blank" rel="noopener">
+        <div class="card-eyebrow" style="color:#e8c84a">www.hp.com</div>
+        <h3>Best AI Creativity Tools: Free & Paid Options - HP® Tech Takes</h3>
+        <p>Jan 21, 2026 ... Generative AI makes new content by learning from large sets of images, text, and audio. It spots patterns and uses them to create similar ...</p>
+        <span class="source-link">www.hp.com ↗</span>
+      </a>
+      <a class="card" href="https://rgd.ca/articles/2026-amplifying-creativity-with-ai-tools-for-designers-in-2026" target="_blank" rel="noopener">
+        <div class="card-eyebrow" style="color:#e8c84a">rgd.ca</div>
+        <h3>Amplifying creativity with AI tools for designers in 2026 - RGD</h3>
+        <p>Adobe Firefly. Adobe Firefly continues to evolve as one example of generative AI embedded within professional design software. · onbeacon AI.</p>
+        <span class="source-link">rgd.ca ↗</span>
       </a></div>
-
-    <div class="section-label">🖥️ UI/UX &amp; Design</div>
+    <div class="section-label">🖥️ UI/UX, Typography &amp; Branding</div>
     <div class="grid">
-      <a class="card" href="https://uxdesign.cc/the-most-popular-experience-design-trends-of-2026-3ca85c8a3e3d" target="_blank" rel="noopener">
-        <div class="card-eyebrow" style="color:#38bdf8">UI/UX</div>
-        <h3>The most popular experience design trends of 2026 - UX Collective</h3>
-        <p>Jan 26, 2026 ... Beyond branding, nostalgia will be utilized in product design through UI patterns that feel familiar, typography that echoes early software or ...</p>
-        <span class="source-link">uxdesign.cc ↗</span>
-      </a>
       <a class="card" href="https://www.figma.com/resource-library/web-design-trends/" target="_blank" rel="noopener">
-        <div class="card-eyebrow" style="color:#38bdf8">UI/UX</div>
+        <div class="card-eyebrow" style="color:#38bdf8">www.figma.com</div>
         <h3>Top Web Design Trends for 2026 | Figma</h3>
-        <p>Expect neon accents, chrome textures, pixel art, bold gradients inspired by sci-fi films, arcade games, and early Web aesthetics. Retrofuturism often pairs well ...</p>
+        <p>Top Web design trends for 2026 · Trend 1: 3D and immersive elements · Trend 2: Experimental navigation · Trend 3: Vibrant color palettes · Trend 4: Bold typography ...</p>
         <span class="source-link">www.figma.com ↗</span>
       </a>
-      <a class="card" href="https://medium.com/@focotik.agency/8-top-notch-ux-ui-design-trends-to-watch-in-2026-71ffddc77ffc" target="_blank" rel="noopener">
-        <div class="card-eyebrow" style="color:#38bdf8">UI/UX</div>
-        <h3>8 Top-Notch UX/UI Design Trends to Watch in 2026 | by Focotik</h3>
-        <p>Jan 12, 2026 ... 8 Top-Notch UX/UI Design Trends to Watch in 2026 · 1. Tactile Maximalism: The Squishy-uishy UI · 2. Typography Kinetic Letters Dance · 3. Bento ...</p>
-        <span class="source-link">medium.com ↗</span>
+      <a class="card" href="https://blog.prototypr.io/ux-ui-design-trends-for-2026-from-ai-to-xr-to-vibe-creation-7c5f8e35dc1d" target="_blank" rel="noopener">
+        <div class="card-eyebrow" style="color:#38bdf8">blog.prototypr.io</div>
+        <h3>UX/UI Design Trends for 2026 — From AI to XR to Vibe Creation</h3>
+        <p>Nov 19, 2025 ... UX/UI Design Trends for 2026 — From AI to XR to Vibe Creation · 1. Mixed Reality In The Day-To-Day · 2. Voice Based Interface Design · 3. Glass is ...</p>
+        <span class="source-link">blog.prototypr.io ↗</span>
       </a>
-      <a class="card" href="https://www.wix.com/blog/web-design-trends" target="_blank" rel="noopener">
-        <div class="card-eyebrow" style="color:#38bdf8">UI/UX</div>
-        <h3>The 11 Biggest Web Design Trends of 2026 - Wix.com</h3>
-        <p>Jan 27, 2026 ... 10. Dial-up design · Look to the recently launched internet culture site ·; the new Gen Z myspace-inspired app, ·; and the female-run media ...</p>
-        <span class="source-link">www.wix.com ↗</span>
+      <a class="card" href="https://uxdesign.cc/10-ux-design-shifts-you-cant-ignore-in-2026-8f0da1c6741d" target="_blank" rel="noopener">
+        <div class="card-eyebrow" style="color:#38bdf8">uxdesign.cc</div>
+        <h3>10 UX design shifts you can't ignore in 2026 | by Arin Bhowmick</h3>
+        <p>Jan 1, 2026 ... Another year, another wave of “What to expect in 2026” guides. I'm sure you've already scrolled through a few. · 1. Explainable AI becomes non- ...</p>
+        <span class="source-link">uxdesign.cc ↗</span>
+      </a>
+      <a class="card" href="https://www.reddit.com/r/webdesign/comments/1q6dmix/25_ui_design_inspiration_websites_worth/" target="_blank" rel="noopener">
+        <div class="card-eyebrow" style="color:#38bdf8">www.reddit.com</div>
+        <h3>25 UI Design Inspiration Websites Worth Bookmarking in 2026</h3>
+        <p>Jan 7, 2026 ... Muzli – Real-time design inspiration and trends. UI Movement – Interactive and animated UI ideas. Awwwards – Best web designs from around the ...</p>
+        <span class="source-link">www.reddit.com ↗</span>
+      </a>
+      <a class="card" href="https://uxdesign.cc/the-most-popular-experience-design-trends-of-2026-3ca85c8a3e3d" target="_blank" rel="noopener">
+        <div class="card-eyebrow" style="color:#38bdf8">uxdesign.cc</div>
+        <h3>The most popular experience design trends of 2026 | by Joe Smiley</h3>
+        <p>Jan 26, 2026 — In 2026, I'm predicting that designing for intent, Machine Experience (MX) design, designing better prompts, and AI generated Design Systems ...</p>
+        <span class="source-link">uxdesign.cc ↗</span>
       </a>
       <a class="card" href="https://www.adobe.com/express/learn/blog/design-trends-2026" target="_blank" rel="noopener">
-        <div class="card-eyebrow" style="color:#38bdf8">Design</div>
+        <div class="card-eyebrow" style="color:#38bdf8">www.adobe.com</div>
         <h3>Design trends for 2026 - Adobe</h3>
-        <p>Dec 12, 2025 ... Warm, personal visual style ... Flexible, human-centered design is going to be the name of the game in 2026. Aim for gentle and inclusive tones, ...</p>
+        <p>Dec 12, 2025 ... Organic and analog are showing up in hand-rendered and letterpress-inspired fonts, in earthy textures (sand, stone, bark), and in low-contrast, ...</p>
         <span class="source-link">www.adobe.com ↗</span>
       </a>
-      <a class="card" href="https://www.itsnicethat.com/features/forward-thinking-graphic-trends-2026-graphic-design-120126" target="_blank" rel="noopener">
-        <div class="card-eyebrow" style="color:#38bdf8">Design</div>
-        <h3>The graphic trends you'll want to bookmark for 2026 - It's Nice That</h3>
-        <p>Jan 12, 2026 ... Taking a closer look at five key areas that show up in many practices in graphic design today: typography, logo design, print, editorial design ...</p>
-        <span class="source-link">www.itsnicethat.com ↗</span>
+      <a class="card" href="https://www.fontfabric.com/blog/10-design-trends-shaping-the-visual-typographic-landscape-in-2026/?srsltid=AfmBOooWbik8TT8L2vogCjTPvY1s1GZWum9qDuupQKvp6ea2vQeGytsY" target="_blank" rel="noopener">
+        <div class="card-eyebrow" style="color:#38bdf8">www.fontfabric.com</div>
+        <h3>10 Design Trends Shaping the Visual & Typographic Landscape in 2026</h3>
+        <p>Dec 9, 2025 — Discover 10 graphic design and typography trends for 2026, from AI-powered visuals to naive, imperfect, human-made identities and bold type.</p>
+        <span class="source-link">www.fontfabric.com ↗</span>
       </a>
       <a class="card" href="https://www.creativeboom.com/resources/top-50-fonts-in-2026/" target="_blank" rel="noopener">
-        <div class="card-eyebrow" style="color:#38bdf8">Design</div>
+        <div class="card-eyebrow" style="color:#38bdf8">www.creativeboom.com</div>
         <h3>50 fonts that will be popular with designers in 2026 | Creative Boom</h3>
-        <p>Sep 18, 2025 ... Don't you just love how typography is constantly evolving? Because let's be clear: foundries around the world are pushing the boundaries of ...</p>
-        <span class="source-link">www.creativeboom.com ↗</span>
-      </a></div>
-
-    <div class="section-label">🎨 Illustration, Traditional &amp; Mixed Media</div>
-    <div class="grid">
-      <a class="card" href="https://www.creativeboom.com/inspiration/six-surprising-illustration-trends-for-2026/" target="_blank" rel="noopener">
-        <div class="card-eyebrow" style="color:#f97316">Illustration</div>
-        <h3>Six surprising illustration trends for 2026 | Creative Boom</h3>
-        <p>Dec 18, 2025 ... Represented by The Artworks, Chris Wormell is an artist who adapted to digital illustration ... And what will the hand of the artist express in ...</p>
+        <p>Sep 18, 2025 ... Mat Desjardins created Neue Montreal in 2018 as a versatile grotesque with the spirit of a display font. Inspired by the Canadian city that ...</p>
         <span class="source-link">www.creativeboom.com ↗</span>
       </a>
-      <a class="card" href="https://www.creativebloq.com/art/illustration/messy-meaningful-and-made-by-humans-the-biggest-illustration-trends-for-2026" target="_blank" rel="noopener">
-        <div class="card-eyebrow" style="color:#f97316">Illustration</div>
-        <h3>the biggest illustration trends for 2026 | Creative Bloq</h3>
-        <p>Dec 27, 2025 ... ... art techniques Digital art trends 2026 reveal how creatives are responding to AI pressure ... Hand-drawn moments signal care and human connection.</p>
+      <a class="card" href="https://www.pinterest.com/mooreaseal/typography/" target="_blank" rel="noopener">
+        <div class="card-eyebrow" style="color:#38bdf8">www.pinterest.com</div>
+        <h3>230 Typography ideas in 2026</h3>
+        <p>Feb 17, 2026 - beautiful fonts. See more ideas about typography, lettering, typography design.</p>
+        <span class="source-link">www.pinterest.com ↗</span>
+      </a>
+      <a class="card" href="https://www.thebrandingjournal.com/2026/01/top-branding-design-trends-2026/" target="_blank" rel="noopener">
+        <div class="card-eyebrow" style="color:#38bdf8">www.thebrandingjournal.com</div>
+        <h3>Top Branding & Design Trends For 2026 - The Branding Journal</h3>
+        <p>Jan 19, 2026 ... Top Branding & Design Trends For 2026 · First, agentic AI is changing the rules of branding and marketing. · Second, personal branding is shifting ...</p>
+        <span class="source-link">www.thebrandingjournal.com ↗</span>
+      </a>
+      <a class="card" href="https://sprout.cc/blog/2026-packaging-design-trends/" target="_blank" rel="noopener">
+        <div class="card-eyebrow" style="color:#38bdf8">sprout.cc</div>
+        <h3>6 Trends Shaping Packaging Design in 2026 - Sprout Studios</h3>
+        <p>Feb 6, 2026 ... More layers. More inserts. More plastic. More waste. More cost. More friction. The era of “more” packaging is over. In 2026, the brands ...</p>
+        <span class="source-link">sprout.cc ↗</span>
+      </a>
+      <a class="card" href="https://www.vistaprint.com/hub/packaging-design-trends?srsltid=AfmBOoqhir01stADCwl1tn2c2e-7LPhynhXPwA50BjWAxR-vQcnVxjVR" target="_blank" rel="noopener">
+        <div class="card-eyebrow" style="color:#38bdf8">www.vistaprint.com</div>
+        <h3>10 Notable Packaging Trends For 2026</h3>
+        <p>Oct 29, 2025 — Discover the top packaging trends for 2026. From Industrial Minimalism to AR layers, learn how to refresh your packaging and connect with ...</p>
+        <span class="source-link">www.vistaprint.com ↗</span>
+      </a>
+      <a class="card" href="https://www.superside.com/blog/packaging-designs" target="_blank" rel="noopener">
+        <div class="card-eyebrow" style="color:#38bdf8">www.superside.com</div>
+        <h3>19 Best Packaging Design Examples To Fuel Your Marketing in 2026</h3>
+        <p>Dec 14, 2025 ... It reflects your brand identity and serves as a powerful marketing tool that ultimately determines whether customers buy from you or not.</p>
+        <span class="source-link">www.superside.com ↗</span>
+      </a></div>
+    <div class="section-label">🎨 Illustration, Fine Art &amp; Mixed Media</div>
+    <div class="grid">
+      <a class="card" href="https://www.creativebloq.com/art/digital-art/digital-art-trends-2026-reveal-how-creatives-are-responding-to-ai-pressure" target="_blank" rel="noopener">
+        <div class="card-eyebrow" style="color:#f97316">www.creativebloq.com</div>
+        <h3>Digital art trends 2026 reveal how creatives are responding to AI ...</h3>
+        <p>Dec 17, 2025 ... Digital art trends 2026 reveal how creatives are responding to AI pressure · 2D and 3D merges · Colour trends · AR & VR is back · Learn a game ...</p>
         <span class="source-link">www.creativebloq.com ↗</span>
       </a>
-      <a class="card" href="https://getillustrations.com/blog/emerging-illustration-styles-to-watch-in-2026/?srsltid=AfmBOorEHqfi8ZmnU2m7mW8c-puKEMSi8cY0uQN7aZVj111SXzV_xB64" target="_blank" rel="noopener">
-        <div class="card-eyebrow" style="color:#f97316">Illustration</div>
-        <h3>Illustration Trends 2026 - GetIllustrations</h3>
-        <p>Oct 9, 2025 ... Discover the top illustration trends shaping web and app design in 2026. From AI-assisted art to neo-brutalism. Expert analysis with visual ...</p>
-        <span class="source-link">getillustrations.com ↗</span>
+      <a class="card" href="https://invernessdesignstudio.com/top-10-tradigital-artists-2026" target="_blank" rel="noopener">
+        <div class="card-eyebrow" style="color:#f97316">invernessdesignstudio.com</div>
+        <h3>Top 10 Tradigital Artists to Watch in 2026: Digital & Traditional Art</h3>
+        <p>Essential traditional skills include drawing, painting, and understanding texture and colour theory, often using mediums like pencil, charcoal, acrylics, and ...</p>
+        <span class="source-link">invernessdesignstudio.com ↗</span>
       </a>
-      <a class="card" href="https://maddoxgallery.com/news/496-5-contemporary-artists-to-watch-2026/" target="_blank" rel="noopener">
-        <div class="card-eyebrow" style="color:#f97316">Traditional</div>
-        <h3>5 Contemporary Artists to Watch in 2026: Meet the Up and Coming ...</h3>
-        <p>Dec 30, 2025 ... The landscape of Contemporary art in 2026 brings the visions of up and coming artists pushing beyond familiar boundaries, ...</p>
-        <span class="source-link">maddoxgallery.com ↗</span>
+      <a class="card" href="https://ginangiela.com/digital-art-trends-2026/" target="_blank" rel="noopener">
+        <div class="card-eyebrow" style="color:#f97316">ginangiela.com</div>
+        <h3>TOP 10 Digital Art Trends 2026: This Type Of Art Sells Best</h3>
+        <p>Jan 21, 2026 — Naive Design is a popular digital art trend in 2026 because it feels authentic and human. It's a perfectly imperfect counterpoint to the hyper- ...</p>
+        <span class="source-link">ginangiela.com ↗</span>
+      </a>
+      <a class="card" href="https://www.artsy.net/gene/digital-painting-and-drawing" target="_blank" rel="noopener">
+        <div class="card-eyebrow" style="color:#f97316">www.artsy.net</div>
+        <h3>Digital Painting and Drawing - Artsy</h3>
+        <p>A process in which painting or drawing takes place in a digital setting. Starting with the availability of computer graphics software for personal use in ...</p>
+        <span class="source-link">www.artsy.net ↗</span>
       </a>
       <a class="card" href="https://www.artsy.net/article/artsy-editorial-12-collectors-artists-trends-watch-2026" target="_blank" rel="noopener">
-        <div class="card-eyebrow" style="color:#f97316">Traditional</div>
+        <div class="card-eyebrow" style="color:#f97316">www.artsy.net</div>
         <h3>12 Collectors on the Artists, Shows, and Trends to Watch in 2026</h3>
         <p>Jan 20, 2026 ... Alia Al-Senussi, Patrick Sun, Mitra Murthy, Sean Green, and more on the art world moments they're most excited about in 2026.</p>
         <span class="source-link">www.artsy.net ↗</span>
       </a>
-      <a class="card" href="https://www.youtube.com/watch?v=GWAhNJau7Jg" target="_blank" rel="noopener">
-        <div class="card-eyebrow" style="color:#f97316">Traditional</div>
-        <h3>From Flat to Painterly: How to Transform Your Portraits in 2026</h3>
-        <p>Jan 2, 2026 ... ... painting and make you hesitate to share your art or enter exhibitions. ... Go to channel Konstantin Fine Art · Classical Oil Portrait – Step by ...</p>
-        <span class="source-link">www.youtube.com ↗</span>
+      <a class="card" href="https://maddoxgallery.com/news/496-5-contemporary-artists-to-watch-2026/" target="_blank" rel="noopener">
+        <div class="card-eyebrow" style="color:#f97316">maddoxgallery.com</div>
+        <h3>5 Contemporary Artists to Watch in 2026: Meet the Up and Coming ...</h3>
+        <p>Dec 30, 2025 ... ... visual language across painting, sculpture, editions and large-scale public installations. ... contemporary artist of 2021.</p>
+        <span class="source-link">maddoxgallery.com ↗</span>
       </a>
-      <a class="card" href="https://www.ellisvisualarts.com/post/innovative-mixed-media-ideas-for-2026-where-process-texture-and-meaning-meet?srsltid=AfmBOor_As8f0FRGkPfMkn8fm-rAQmBEUA--_lZ7DkDx_ZhcG6SxI9xX" target="_blank" rel="noopener">
-        <div class="card-eyebrow" style="color:#c084fc">Mixed Media</div>
+      <a class="card" href="https://agora-gallery.com/art-blog/artists-to-watch-in-2026/" target="_blank" rel="noopener">
+        <div class="card-eyebrow" style="color:#f97316">agora-gallery.com</div>
+        <h3>Artists to watch in 2026 - Agora Gallery Blog</h3>
+        <p>Sep 1, 2025 ... ... painting, drawing, Buon Fresco, and experimental blotting techniques. ... contemporary Polish art. Rendecka often uses her personal ...</p>
+        <span class="source-link">agora-gallery.com ↗</span>
+      </a>
+      <a class="card" href="https://www.wmagazine.com/culture/art-shows-exhibits-museums-galleries-2026" target="_blank" rel="noopener">
+        <div class="card-eyebrow" style="color:#f97316">www.wmagazine.com</div>
+        <h3>The Must-See Art Shows and Exhibitions of 2026</h3>
+        <p>Jan 6, 2026 — From Ming Smith's latest photography exhibition to painter Max Jahn's first solo show in New York.</p>
+        <span class="source-link">www.wmagazine.com ↗</span>
+      </a>
+      <a class="card" href="https://fristartmuseum.org/event/adult-artlab-mixed-media-collage/" target="_blank" rel="noopener">
+        <div class="card-eyebrow" style="color:#f97316">fristartmuseum.org</div>
+        <h3>Adult ARTlab: Mixed Media Collage—Constructing Our Narratives</h3>
+        <p>In this workshop, participants will learn techniques for combining imagery, text, and texture to visually reflect their own lived experiences. ... 2026 Frist Art ...</p>
+        <span class="source-link">fristartmuseum.org ↗</span>
+      </a>
+      <a class="card" href="https://www.ellisvisualarts.com/post/innovative-mixed-media-ideas-for-2026-where-process-texture-and-meaning-meet?srsltid=AfmBOoqOMTSvO-xqmqaa5OFeBgvWJkfnMnQC9maAhHsU_YyCZjkTj4jV" target="_blank" rel="noopener">
+        <div class="card-eyebrow" style="color:#f97316">www.ellisvisualarts.com</div>
         <h3>Innovative Mixed Media Ideas for 2026: Where Process, Texture ...</h3>
         <p>1. Material-Led Storytelling (Instead of Theme-First Art) · Acrylic underpainting paired with partially obscured collage · Paper embedded beneath ...</p>
         <span class="source-link">www.ellisvisualarts.com ↗</span>
       </a>
-      <a class="card" href="https://hopalongstudio.com/mixed-media-collage-techniques-you-need-to-try/" target="_blank" rel="noopener">
-        <div class="card-eyebrow" style="color:#c084fc">Mixed Media</div>
-        <h3>Mixed Media Collage Techniques You Need to Try!</h3>
-        <p>Mar 21, 2025 ... 02/27/2026 07:39 am GMT. acetateArt JournalingArt TutorialsArt Videoscollagefabric tapeMixed Mediamixed media collagewatercolor powders. By ...</p>
-        <span class="source-link">hopalongstudio.com ↗</span>
+      <a class="card" href="https://nashvillelifestyles.com/events/adult-artlab-mixed-media-collage-constructing-narratives/?occ_dtstart=2026-02-22T14:00" target="_blank" rel="noopener">
+        <div class="card-eyebrow" style="color:#f97316">nashvillelifestyles.com</div>
+        <h3>Adult ARTlab: Mixed Media Collage—Constructing Our Narratives</h3>
+        <p>6 days ago — In this workshop, participants will learn techniques for combining imagery, text, and texture to visually reflect their own lived experiences.</p>
+        <span class="source-link">nashvillelifestyles.com ↗</span>
       </a>
-      <a class="card" href="https://app.entrythingy.com/calls/external/creative-collages-2026/" target="_blank" rel="noopener">
-        <div class="card-eyebrow" style="color:#c084fc">Mixed Media</div>
-        <h3>Creative Collages (2026) | MVA Gallery (Modern Visual Arts)</h3>
-        <p>This is a national call for entries featuring collages and collage-like artwork ... The gallery accepts painting, watercolor, printmaking, mixed media, digital ...</p>
-        <span class="source-link">app.entrythingy.com ↗</span>
+      <a class="card" href="https://www.ellisvisualarts.com/post/innovative-mixed-media-ideas-for-2026-where-process-texture-and-meaning-meet?srsltid=AfmBOoqDWHGQXz3ycI-x8ivlEiyAAHvGkQBPEv6qhbYj-WfKNqXt-nVA" target="_blank" rel="noopener">
+        <div class="card-eyebrow" style="color:#f97316">www.ellisvisualarts.com</div>
+        <h3>Innovative Mixed Media Ideas for 2026: Where Process, Texture, and ...</h3>
+        <p>4 days ago — Combine drawing, painting, collage, and texture ... Eye-level view of a mixed media art piece with layered flaps and hidden compartments.</p>
+        <span class="source-link">www.ellisvisualarts.com ↗</span>
+      </a>
+      <a class="card" href="https://www.housebeautiful.com/design-inspiration/a69484298/2026-interior-design-trends/" target="_blank" rel="noopener">
+        <div class="card-eyebrow" style="color:#f97316">www.housebeautiful.com</div>
+        <h3>The Top 2026 Interior Design Trends, According to Designers</h3>
+        <p>Jan 29, 2026 ... Paint is being used with architectural intent. Designers are outlining ceilings, emphasizing slopes, framing openings, and introducing visual ...</p>
+        <span class="source-link">www.housebeautiful.com ↗</span>
+      </a>
+      <a class="card" href="https://www.vogue.com/article/interior-design-trends-2026" target="_blank" rel="noopener">
+        <div class="card-eyebrow" style="color:#f97316">www.vogue.com</div>
+        <h3>The 11 Key Interior Design Trends Set to Define 2026 | Vogue</h3>
+        <p>Dec 9, 2025 ... It can offer some much-needed inspiration ... Decorative detailing. Image may contain Indoors Interior Design Lamp Architecture Building Foyer ...</p>
+        <span class="source-link">www.vogue.com ↗</span>
+      </a>
+      <a class="card" href="https://woodgrain.com/top-10-interior-trends-of-2026/" target="_blank" rel="noopener">
+        <div class="card-eyebrow" style="color:#f97316">woodgrain.com</div>
+        <h3>Top 10 Interior Trends of 2026 - Woodgrain</h3>
+        <p>Fluted and reeded millwork is set to remain a major design element in 2026 as textured surfaces continue to replace smooth, flat planes. These architectural ...</p>
+        <span class="source-link">woodgrain.com ↗</span>
       </a></div>
-
   </div>
   <footer>Art Inspiration Daily &nbsp;·&nbsp; Powered by Wally &nbsp;·&nbsp; Refreshed 2026-02-28 &nbsp;·&nbsp; Sources: SearXNG multi-engine search</footer>
 </body>
