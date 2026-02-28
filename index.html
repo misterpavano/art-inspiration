@@ -36,6 +36,20 @@
       .card{padding:16px;}
       .card h3{font-size:15px;}
     }
+  
+    .section-block{margin-bottom:56px;}
+    .section-label{font-size:11px;padding:10px 16px;margin-bottom:20px;background:var(--surface2);border:1px solid var(--border);border-left:4px solid var(--accent);display:flex;align-items:center;gap:10px;}
+    .section-label::after{display:none;}
+    .section-block:nth-child(2) .section-label{border-left-color:var(--accent2);}
+    .section-block:nth-child(3) .section-label{border-left-color:var(--accent3);}
+    .section-block:nth-child(4) .section-label{border-left-color:#f97316;}
+    .grid{gap:16px;}
+    .card{border-top:3px solid var(--border);}
+    .section-block:nth-child(1) .card{border-top-color:var(--accent);}
+    .section-block:nth-child(2) .card{border-top-color:var(--accent2);}
+    .section-block:nth-child(3) .card{border-top-color:var(--accent3);}
+    .section-block:nth-child(4) .card{border-top-color:#f97316;}
+
   </style>
 </head>
 <body>
