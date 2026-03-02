@@ -1,146 +1,479 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Art Inspiration Daily</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Space+Mono:wght@400;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;600&display=swap');
-    *{box-sizing:border-box;margin:0;padding:0;}
-    body{background:#111;color:#f0f0f0;font-family:'DM Sans',sans-serif;padding-bottom:80px;}
-    header{padding:40px;border-bottom:1px solid #222;}
-    .logo{font-size:10px;text-transform:uppercase;letter-spacing:0.3em;color:#666;margin-bottom:10px;}
-    h1{font-family:'DM Serif Display',serif;font-size:clamp(32px,6vw,64px);font-weight:400;line-height:1.1;}
-    h1 em{font-style:italic;color:#e8c84a;}
-    .date{margin-top:10px;font-size:12px;color:#555;}
-    .zone-classical{background:#1a1510;border-top:3px solid #c9a84c;padding:48px 40px;}
-    .zone-digital{background:#0a0f1a;border-top:3px solid #4361ee;padding:48px 40px;}
-    .zone-street{background:#0f0f0f;border-top:3px solid #e63946;padding:48px 40px;}
-    .zone-photo{background:#0f0a1a;border-top:3px solid #a855f7;padding:48px 40px;}
-    .zone-design{background:#0a140f;border-top:3px solid #4ade80;padding:48px 40px;}
-    .room-header{margin-bottom:32px;}
-    .room-eyebrow{font-size:10px;text-transform:uppercase;letter-spacing:0.3em;margin-bottom:8px;}
-    .zone-classical .room-eyebrow{color:#c9a84c;} .zone-digital .room-eyebrow{color:#4361ee;} .zone-street .room-eyebrow{color:#e63946;} .zone-photo .room-eyebrow{color:#a855f7;} .zone-design .room-eyebrow{color:#4ade80;}
-    .room-title{font-family:'DM Serif Display',serif;font-size:28px;font-weight:400;}
-    .gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;}
-    .card{padding:24px;border:1px solid;text-decoration:none;color:inherit;display:block;transition:transform 0.2s,box-shadow 0.2s;}
-    .card:hover{transform:translateY(-4px);}
-    .zone-classical .card{background:#221d13;border-color:#3d3020;} .zone-classical .card:hover{box-shadow:0 8px 32px rgba(201,168,76,0.15);}
-    .zone-digital .card{background:#0d1428;border-color:#1a2550;} .zone-digital .card:hover{box-shadow:0 8px 32px rgba(67,97,238,0.2);}
-    .zone-street .card{background:#1a0f0f;border-color:#3d1515;} .zone-street .card:hover{box-shadow:0 8px 32px rgba(230,57,70,0.2);}
-    .zone-photo .card{background:#150d1f;border-color:#2d1a40;} .zone-photo .card:hover{box-shadow:0 8px 32px rgba(168,85,247,0.2);}
-    .zone-design .card{background:#0d1a0f;border-color:#1a3020;} .zone-design .card:hover{box-shadow:0 8px 32px rgba(74,222,128,0.15);}
-    .card-tag{font-size:10px;text-transform:uppercase;letter-spacing:0.2em;margin-bottom:10px;}
-    .zone-classical .card-tag{color:#c9a84c;} .zone-digital .card-tag{color:#4361ee;} .zone-street .card-tag{color:#e63946;} .zone-photo .card-tag{color:#a855f7;} .zone-design .card-tag{color:#4ade80;}
-    .card h3{font-family:'DM Serif Display',serif;font-size:18px;font-weight:400;line-height:1.35;margin-bottom:10px;}
-    .card p{font-size:13px;line-height:1.75;color:#999;}
-    .card-link{display:inline-block;margin-top:14px;font-size:11px;color:#555;border-bottom:1px solid #333;}
-    footer{text-align:center;padding:24px 40px;font-size:11px;color:#444;border-top:1px solid #222;}
-    @media(max-width:768px){header,.zone-classical,.zone-digital,.zone-street,.zone-photo,.zone-design{padding:24px 16px;}.gallery{grid-template-columns:1fr;}}
+    :root {
+      --bg: #F5F1E8;
+      --surface: #FFFFFF;
+      --surface-alt: #EDE8DC;
+      --text: #1A1A1A;
+      --text-muted: #5C5C5C;
+      --accent: #C43C2D;
+      --border: #2A2A2A;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Source Serif 4', Georgia, serif;
+      min-height: 100vh;
+    }
+
+    /* MASTHEAD */
+    .masthead {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 48px 40px 28px;
+    }
+
+    .masthead-inner {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .masthead-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 900;
+      font-size: clamp(56px, 10vw, 104px);
+      line-height: 0.88;
+      letter-spacing: -0.025em;
+      text-transform: uppercase;
+      color: var(--text);
+      flex: 1;
+      min-width: 240px;
+    }
+
+    .masthead-right {
+      text-align: right;
+      padding-bottom: 8px;
+    }
+
+    .masthead-vol {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      color: var(--accent);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 7px;
+      font-weight: 700;
+    }
+
+    .masthead-sub {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      color: var(--text-muted);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .masthead-rule-wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+
+    .masthead-rule-wrap hr {
+      border: none;
+      border-top: 1.5px solid var(--border);
+    }
+
+    /* CONTAINER */
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 40px 80px;
+    }
+
+    /* SECTION HEADER */
+    .section-header {
+      margin-top: 52px;
+      border-top: 3px solid var(--border);
+      border-bottom: 1.5px solid var(--border);
+      padding: 11px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .section-header-left {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      gap: 9px;
+    }
+
+    .section-numeral {
+      color: var(--accent);
+    }
+
+    .section-header-right {
+      font-family: 'Space Mono', monospace;
+      font-size: 10px;
+      color: var(--text-muted);
+      letter-spacing: 0.1em;
+      white-space: nowrap;
+    }
+
+    /* FEATURED CARD */
+    .featured-card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 1px solid var(--border);
+      border-radius: 2px;
+      padding: 32px;
+      margin-top: 18px;
+      transition: border-left 0.12s ease, box-shadow 0.12s ease;
+    }
+
+    .featured-card:hover {
+      border-left: 4px solid var(--accent);
+      box-shadow: 3px 6px 24px rgba(0,0,0,0.09);
+    }
+
+    .featured-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+
+    .featured-right {
+      border-left: 1px solid var(--surface-alt);
+      padding-left: 32px;
+    }
+
+    .card-category {
+      font-family: 'Inter', sans-serif;
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--accent);
+      margin-bottom: 14px;
+    }
+
+    .headline-lg {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 700;
+      font-size: clamp(20px, 2.8vw, 26px);
+      line-height: 1.18;
+      color: var(--text);
+      margin-bottom: 16px;
+    }
+
+    .body-text {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 15px;
+      line-height: 1.78;
+      color: var(--text-muted);
+    }
+
+    .card-source {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      margin-top: 20px;
+      font-family: 'Space Mono', monospace;
+      font-size: 10px;
+      color: var(--text-muted);
+      letter-spacing: 0.07em;
+    }
+
+    /* CARD GRID */
+    .card-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 14px;
+    }
+
+    .card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 1px solid var(--border);
+      border-radius: 2px;
+      padding: 24px;
+      transition: border-left 0.12s ease, box-shadow 0.12s ease;
+    }
+
+    .card:hover {
+      border-left: 4px solid var(--accent);
+      box-shadow: 3px 6px 24px rgba(0,0,0,0.09);
+    }
+
+    .headline-sm {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 1.22;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+
+    .body-sm {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 14px;
+      line-height: 1.72;
+      color: var(--text-muted);
+    }
+
+    /* FOOTER */
+    footer {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 28px 40px 52px;
+      text-align: center;
+      border-top: 1.5px solid var(--border);
+      margin-top: 56px;
+    }
+
+    footer p {
+      font-family: 'Space Mono', monospace;
+      font-size: 10px;
+      color: var(--text-muted);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      line-height: 2;
+    }
+
+    footer p span { color: var(--accent); }
+
+    /* RESPONSIVE */
+    @media (max-width: 720px) {
+      .masthead, .masthead-rule-wrap { padding-left: 20px; padding-right: 20px; }
+      .container { padding: 0 20px 60px; }
+      .featured-inner { grid-template-columns: 1fr; }
+      .featured-right { border-left: none; padding-left: 0; border-top: 1px solid var(--surface-alt); padding-top: 20px; }
+      .card-grid { grid-template-columns: 1fr; }
+      footer { padding: 24px 20px 40px; }
+    }
   </style>
 </head>
 <body>
-  <header>
-    <div class="logo">Art Inspiration Daily</div>
-    <h1>What's <em>moving</em><br>right now.</h1>
-    <div class="date">Monday, March 2, 2026</div>
-  </header>
 
-  <div class="zone-classical">
-    <div class="room-header"><div class="room-eyebrow">Room I</div><div class="room-title">Classical &amp; Traditional</div></div>
-    <div class="gallery">
-      <a class="card" href="https://www.artnews.com/list/art-news/news/spring-art-preview-1234774768/" target="_blank">
-        <div class="card-tag">Biennial / Exhibition Preview</div>
-        <h3>75 Museum Shows to See in Spring 2026 — Venice Leads</h3>
-        <p>ArtNews dropped its essential spring preview this morning, headlined by the 61st Venice Biennale's main exhibition <em>In Minor Keys</em> — 111 artists centered on diaspora, memory, and procession. The Marcel Duchamp retrospective at MoMA is the other can't-miss. The list is worth reading slowly.</p>
-        <span class="card-link">artnews.com ↗</span>
-      </a>
-      <a class="card" href="https://www.sortiraparis.com/en/what-to-visit-in-paris/exhibit-museum/articles/342113-david-cohen-s-tetes-et-mots-exhibit-at-galerie-rachel-hardouin-in-paris" target="_blank">
-        <div class="card-tag">Painting / Sculpture</div>
-        <h3>David Cohen: Têtes et Mots — Paris Opens Tomorrow</h3>
-        <p>Opening Tuesday at Galerie Rachel Hardouin, this show runs through April 11 and puts paintings, sculptures, and ceramics in direct conversation around the human figure and the written word. Cohen's work has an old-world density that feels out of step with everything — in the best way.</p>
-        <span class="card-link">sortiraparis.com ↗</span>
-      </a>
+  <!-- MASTHEAD -->
+  <div class="masthead">
+    <div class="masthead-inner">
+      <h1 class="masthead-title">Art<br>Inspiration</h1>
+      <div class="masthead-right">
+        <div class="masthead-vol">Vol. I &nbsp;·&nbsp; No. 001</div>
+        <div class="masthead-sub">Daily Digest &nbsp;·&nbsp; March 2, 2026</div>
+      </div>
     </div>
   </div>
+  <div class="masthead-rule-wrap"><hr /></div>
 
-  <div class="zone-digital">
-    <div class="room-header"><div class="room-eyebrow">Room II</div><div class="room-title">Digital &amp; Generative</div></div>
-    <div class="gallery">
-      <a class="card" href="https://www.threads.com/@ai.designawards/post/DVWDxnmDDQD/so-powerful" target="_blank">
-        <div class="card-tag">AI Editorial / Fashion</div>
-        <h3>INSIGNIFICANT — Midjourney Fashion Inside a Misty Forest</h3>
-        <p>A collaboration between AI Design Awards and Topaz Labs, <em>INSIGNIFICANT</em> is a fashion editorial made entirely with Midjourney and Topaz, shot in a misty forest that doesn't exist. It's a reminder that the uncanny is still the sharpest tool generative artists have.</p>
-        <span class="card-link">threads.com ↗</span>
-      </a>
-      <a class="card" href="https://www.bbc.co.uk/mediacentre/2026/bbc-world-service-witness-history-ai-animated-video" target="_blank">
-        <div class="card-tag">AI Animation / Documentary</div>
-        <h3>BBC Witness History Goes AI-Animated</h3>
-        <p>The BBC World Service announced five AI-animated adaptations of <em>Witness History</em> episodes — archival radio turned into moving image via generative tools. It raises thorny questions about animation, authorship, and what historical footage "is," but visually the results are arresting.</p>
-        <span class="card-link">bbc.co.uk ↗</span>
+  <div class="container">
+
+    <!-- I. CLASSICAL & TRADITIONAL -->
+    <div class="section-header">
+      <div class="section-header-left">
+        <span class="section-numeral">I.</span>
+        <span>Classical &amp; Traditional</span>
+      </div>
+      <div class="section-header-right">No. 001 &nbsp;/&nbsp; Mar 2, 2026</div>
+    </div>
+
+    <a class="featured-card" href="https://www.artnews.com/list/art-news/news/spring-art-preview-1234774768/" target="_blank" rel="noopener">
+      <div class="card-category">Biennial &nbsp;·&nbsp; Exhibition Preview</div>
+      <div class="featured-inner">
+        <div class="featured-left">
+          <div class="headline-lg">75 Museum Shows to See in Spring 2026 — Venice Leads</div>
+          <div class="body-text">ArtNews dropped its essential spring preview this morning, headlined by the 61st Venice Biennale's main exhibition <em>In Minor Keys</em> — 111 artists centered on diaspora, memory, and procession. The Marcel Duchamp retrospective at MoMA is the other can't-miss. The list is worth reading slowly.</div>
+          <div class="card-source">artnews.com &nbsp;↗</div>
+        </div>
+        <div class="featured-right">
+          <div class="body-text">Venice every two years sets the tone for what institutions will be programming and what critics will be thinking about for the next 18 months. This year's theme pulls toward the intimate and the diasporic — a counterpoint to the spectacle years. <em>In Minor Keys</em> is a title that rewards attention.</div>
+        </div>
+      </div>
+    </a>
+
+    <div class="card-grid">
+      <a class="card" href="https://www.sortiraparis.com/en/what-to-visit-in-paris/exhibit-museum/articles/342113-david-cohen-s-tetes-et-mots-exhibit-at-galerie-rachel-hardouin-in-paris" target="_blank" rel="noopener">
+        <div class="card-category">Painting &nbsp;·&nbsp; Sculpture</div>
+        <div class="headline-sm">David Cohen: Têtes et Mots — Paris Opens Tomorrow</div>
+        <div class="body-sm">Opening Tuesday at Galerie Rachel Hardouin, this show runs through April 11 and puts paintings, sculptures, and ceramics in direct conversation around the human figure and the written word. Cohen's work has an old-world density that feels out of step with everything — in the best way.</div>
+        <div class="card-source">sortiraparis.com &nbsp;↗</div>
       </a>
     </div>
-  </div>
 
-  <div class="zone-street">
-    <div class="room-header"><div class="room-eyebrow">Room III</div><div class="room-title">Street &amp; Urban</div></div>
-    <div class="gallery">
-      <a class="card" href="https://www.nbcbayarea.com/news/local/art-group-unveils-mural-honoring-alysa-liu-in-oakland/4045083/" target="_blank">
-        <div class="card-tag">Mural / Community Art</div>
-        <h3>Alysa Liu Gets Her Mural — Oakland Comes Through</h3>
-        <p>Illuminaries just unveiled a massive mural of two-time Olympic gold medalist Alysa Liu on the corner of Telegraph Ave and 43rd St in Oakland. The focal image is Liu mid-thizz face — that Bay Area expression of pride — which makes the whole thing feel like the neighborhood claiming her, not the other way around.</p>
-        <span class="card-link">nbcbayarea.com ↗</span>
-      </a>
-      <a class="card" href="https://timesofsandiego.com/life/2026/03/01/barrio-logan-murals-gentrification/" target="_blank">
-        <div class="card-tag">Chicano Art / Preservation</div>
-        <h3>Barrio Logan Sounds the Alarm on Its Murals</h3>
-        <p>San Diego's Chicano Park — a National Historic Landmark — is facing a familiar threat: development pressure erasing the murals that made it sacred in the first place. The community response is fierce and worth watching. A story about what public art actually costs to keep.</p>
-        <span class="card-link">timesofsandiego.com ↗</span>
-      </a>
-      <a class="card" href="https://philadelphia.today/2026/03/philadelphia-again-best-city-for-street-art/" target="_blank">
-        <div class="card-tag">Street Art / City</div>
-        <h3>Philadelphia Named Best U.S. Street Art City — Again</h3>
-        <p>USA Today readers voted Philly the top city for street art for the second year running. The Mural Arts Program has made the city a genuine open-air gallery — over 4,000 murals at last count. Worth revisiting if you haven't been paying attention.</p>
-        <span class="card-link">philadelphia.today ↗</span>
+
+    <!-- II. DIGITAL & GENERATIVE -->
+    <div class="section-header">
+      <div class="section-header-left">
+        <span class="section-numeral">II.</span>
+        <span>Digital &amp; Generative</span>
+      </div>
+      <div class="section-header-right">No. 001 &nbsp;/&nbsp; Mar 2, 2026</div>
+    </div>
+
+    <a class="featured-card" href="https://www.threads.com/@ai.designawards/post/DVWDxnmDDQD/so-powerful" target="_blank" rel="noopener">
+      <div class="card-category">AI Editorial &nbsp;·&nbsp; Fashion</div>
+      <div class="featured-inner">
+        <div class="featured-left">
+          <div class="headline-lg">INSIGNIFICANT — Midjourney Fashion Inside a Misty Forest</div>
+          <div class="body-text">A collaboration between AI Design Awards and Topaz Labs, <em>INSIGNIFICANT</em> is a fashion editorial made entirely with Midjourney and Topaz, shot in a misty forest that doesn't exist. It's a reminder that the uncanny is still the sharpest tool generative artists have.</div>
+          <div class="card-source">threads.com &nbsp;↗</div>
+        </div>
+        <div class="featured-right">
+          <div class="body-text">The images land somewhere between haute couture editorial and Caspar David Friedrich — figures dwarfed by atmospheric wilderness that has no address. A two-tool pipeline with a genuine point of view. The collaboration is a proof-of-concept for what AI creative work looks like when craft is the intention, not the accident.</div>
+        </div>
+      </div>
+    </a>
+
+    <div class="card-grid">
+      <a class="card" href="https://www.bbc.co.uk/mediacentre/2026/bbc-world-service-witness-history-ai-animated-video" target="_blank" rel="noopener">
+        <div class="card-category">AI Animation &nbsp;·&nbsp; Documentary</div>
+        <div class="headline-sm">BBC Witness History Goes AI-Animated</div>
+        <div class="body-sm">The BBC World Service announced five AI-animated adaptations of <em>Witness History</em> episodes — archival radio turned into moving image via generative tools. It raises thorny questions about animation, authorship, and what historical footage "is," but visually the results are arresting.</div>
+        <div class="card-source">bbc.co.uk &nbsp;↗</div>
       </a>
     </div>
-  </div>
 
-  <div class="zone-photo">
-    <div class="room-header"><div class="room-eyebrow">Room IV</div><div class="room-title">Photography</div></div>
-    <div class="gallery">
-      <a class="card" href="https://121clicks.com/inspirations/2026-leica-street-photo-awards-winners/" target="_blank">
-        <div class="card-tag">Street Photography / Awards</div>
-        <h3>30 Winners from the 2026 Leica Street Photo Awards</h3>
-        <p>121Clicks put together a full gallery of all 30 winning images from this year's Leica Street Photo Awards — entries from India, Poland, the UK, China, and more. No single aesthetic dominates, which is exactly the point. Bookmark this one for a slow scroll.</p>
-        <span class="card-link">121clicks.com ↗</span>
+
+    <!-- III. STREET & URBAN -->
+    <div class="section-header">
+      <div class="section-header-left">
+        <span class="section-numeral">III.</span>
+        <span>Street &amp; Urban</span>
+      </div>
+      <div class="section-header-right">No. 001 &nbsp;/&nbsp; Mar 2, 2026</div>
+    </div>
+
+    <a class="featured-card" href="https://www.nbcbayarea.com/news/local/art-group-unveils-mural-honoring-alysa-liu-in-oakland/4045083/" target="_blank" rel="noopener">
+      <div class="card-category">Mural &nbsp;·&nbsp; Community Art</div>
+      <div class="featured-inner">
+        <div class="featured-left">
+          <div class="headline-lg">Alysa Liu Gets Her Mural — Oakland Comes Through</div>
+          <div class="body-text">Illuminaries just unveiled a massive mural of two-time Olympic gold medalist Alysa Liu on the corner of Telegraph Ave and 43rd St in Oakland. The focal image is Liu mid-thizz face — that Bay Area expression of pride — which makes the whole thing feel like the neighborhood claiming her, not the other way around.</div>
+          <div class="card-source">nbcbayarea.com &nbsp;↗</div>
+        </div>
+        <div class="featured-right">
+          <div class="body-text">Public murals at their best don't just decorate — they locate. This one puts Alysa Liu squarely in a specific geography, a specific cultural expression, a specific community that watched her win. The thizz face is not incidental. It's the whole argument about what community art actually does when it's done right.</div>
+        </div>
+      </div>
+    </a>
+
+    <div class="card-grid">
+      <a class="card" href="https://timesofsandiego.com/life/2026/03/01/barrio-logan-murals-gentrification/" target="_blank" rel="noopener">
+        <div class="card-category">Chicano Art &nbsp;·&nbsp; Preservation</div>
+        <div class="headline-sm">Barrio Logan Sounds the Alarm on Its Murals</div>
+        <div class="body-sm">San Diego's Chicano Park — a National Historic Landmark — is facing a familiar threat: development pressure erasing the murals that made it sacred in the first place. The community response is fierce and worth watching. A story about what public art actually costs to keep.</div>
+        <div class="card-source">timesofsandiego.com &nbsp;↗</div>
       </a>
-      <a class="card" href="https://www.straitstimes.com/singapore/moment-of-magic-spore-residents-photo-of-giraffe-near-waters-edge-wins-global-award" target="_blank">
-        <div class="card-tag">Nature Photography / Gold</div>
-        <h3>"Water Ballet" — A Giraffe, a Waterhole, Perfect Light</h3>
-        <p>Singapore permanent resident Vaidehi Chandrasekar took gold at the 2026 World Nature Photography Awards with a shot of a giraffe near a watering hole titled <em>Water Ballet</em>. Shot at 1/1000 sec, it captures a rare behavioral moment wrapped in golden-hour backlight. One of those images that earns its prize.</p>
-        <span class="card-link">straitstimes.com ↗</span>
+      <a class="card" href="https://philadelphia.today/2026/03/philadelphia-again-best-city-for-street-art/" target="_blank" rel="noopener">
+        <div class="card-category">Street Art &nbsp;·&nbsp; City</div>
+        <div class="headline-sm">Philadelphia Named Best U.S. Street Art City — Again</div>
+        <div class="body-sm">USA Today readers voted Philly the top city for street art for the second year running. The Mural Arts Program has made the city a genuine open-air gallery — over 4,000 murals at last count. Worth revisiting if you haven't been paying attention.</div>
+        <div class="card-source">philadelphia.today &nbsp;↗</div>
       </a>
     </div>
-  </div>
 
-  <div class="zone-design">
-    <div class="room-header"><div class="room-eyebrow">Room V</div><div class="room-title">Design &amp; Typography</div></div>
-    <div class="gallery">
-      <a class="card" href="https://authentype.com/2026/03/02/top-10-typography-trends-2026/" target="_blank">
-        <div class="card-tag">Typography Trends</div>
-        <h3>Top 10 Typography Trends Dominating 2026</h3>
-        <p>Published this morning, Authentype's trend report flags the big shift: type families are increasingly being designed with Latin, Arabic, Cyrillic, and CJK scripts simultaneously — equal weight, no afterthought localization. It's a genuine structural change in how type is made, not just what it looks like.</p>
-        <span class="card-link">authentype.com ↗</span>
-      </a>
-      <a class="card" href="https://www.usertesting.com/resources/podcast/craft-ai-and-figma-state-of-design" target="_blank">
-        <div class="card-tag">Design Research / AI</div>
-        <h3>Figma's State of Design 2026 — Craft Is Still Everything</h3>
-        <p>Figma's annual report lands with a headline that will annoy AI boosters: 57% of designers still define craft as <em>visual polish and attention to detail</em>, not prompting speed. The AI conversation in design is real, but it's running into the same wall — taste is not automatable. Yet.</p>
-        <span class="card-link">usertesting.com ↗</span>
+
+    <!-- IV. PHOTOGRAPHY -->
+    <div class="section-header">
+      <div class="section-header-left">
+        <span class="section-numeral">IV.</span>
+        <span>Photography</span>
+      </div>
+      <div class="section-header-right">No. 001 &nbsp;/&nbsp; Mar 2, 2026</div>
+    </div>
+
+    <a class="featured-card" href="https://121clicks.com/inspirations/2026-leica-street-photo-awards-winners/" target="_blank" rel="noopener">
+      <div class="card-category">Street Photography &nbsp;·&nbsp; Awards</div>
+      <div class="featured-inner">
+        <div class="featured-left">
+          <div class="headline-lg">30 Winners from the 2026 Leica Street Photo Awards</div>
+          <div class="body-text">121Clicks put together a full gallery of all 30 winning images from this year's Leica Street Photo Awards — entries from India, Poland, the UK, China, and more. No single aesthetic dominates, which is exactly the point. Bookmark this one for a slow scroll.</div>
+          <div class="card-source">121clicks.com &nbsp;↗</div>
+        </div>
+        <div class="featured-right">
+          <div class="body-text">The diversity of approach — from classically composed to formally radical — tells you something about the health of street photography as a practice. It's not homogenizing. It's expanding. The Leica imprimatur still carries weight, and this year's winners show why: the bar is genuine, not institutional.</div>
+        </div>
+      </div>
+    </a>
+
+    <div class="card-grid">
+      <a class="card" href="https://www.straitstimes.com/singapore/moment-of-magic-spore-residents-photo-of-giraffe-near-waters-edge-wins-global-award" target="_blank" rel="noopener">
+        <div class="card-category">Nature Photography &nbsp;·&nbsp; Gold Award</div>
+        <div class="headline-sm">"Water Ballet" — A Giraffe, a Waterhole, Perfect Light</div>
+        <div class="body-sm">Singapore permanent resident Vaidehi Chandrasekar took gold at the 2026 World Nature Photography Awards with a shot of a giraffe near a watering hole titled <em>Water Ballet</em>. Shot at 1/1000 sec, it captures a rare behavioral moment wrapped in golden-hour backlight. One of those images that earns its prize.</div>
+        <div class="card-source">straitstimes.com &nbsp;↗</div>
       </a>
     </div>
-  </div>
 
-  <footer>Art Inspiration Daily &nbsp;·&nbsp; Powered by Wally &nbsp;·&nbsp; Refreshed Monday, March 2, 2026</footer>
+
+    <!-- V. DESIGN & TYPOGRAPHY -->
+    <div class="section-header">
+      <div class="section-header-left">
+        <span class="section-numeral">V.</span>
+        <span>Design &amp; Typography</span>
+      </div>
+      <div class="section-header-right">No. 001 &nbsp;/&nbsp; Mar 2, 2026</div>
+    </div>
+
+    <a class="featured-card" href="https://authentype.com/2026/03/02/top-10-typography-trends-2026/" target="_blank" rel="noopener">
+      <div class="card-category">Typography &nbsp;·&nbsp; Trends Report</div>
+      <div class="featured-inner">
+        <div class="featured-left">
+          <div class="headline-lg">Top 10 Typography Trends Dominating 2026</div>
+          <div class="body-text">Published this morning, Authentype's trend report flags the big shift: type families are increasingly being designed with Latin, Arabic, Cyrillic, and CJK scripts simultaneously — equal weight, no afterthought localization. It's a genuine structural change in how type is made.</div>
+          <div class="card-source">authentype.com &nbsp;↗</div>
+        </div>
+        <div class="featured-right">
+          <div class="body-text">The historical model — design for Latin, adapt for others — is collapsing under market pressure and design conscience simultaneously. The next decade of type design will look structurally different from the last. If you work with type in any capacity, this report is required reading.</div>
+        </div>
+      </div>
+    </a>
+
+    <div class="card-grid">
+      <a class="card" href="https://www.usertesting.com/resources/podcast/craft-ai-and-figma-state-of-design" target="_blank" rel="noopener">
+        <div class="card-category">Design Research &nbsp;·&nbsp; AI</div>
+        <div class="headline-sm">Figma's State of Design 2026 — Craft Is Still Everything</div>
+        <div class="body-sm">Figma's annual report lands with a headline that will annoy AI boosters: 57% of designers still define craft as <em>visual polish and attention to detail</em>, not prompting speed. The AI conversation in design is real, but it's running into the same wall — taste is not automatable. Yet.</div>
+        <div class="card-source">usertesting.com &nbsp;↗</div>
+      </a>
+    </div>
+
+  </div><!-- /container -->
+
+  <footer>
+    <p>
+      <span>Art Inspiration Daily</span>
+      &nbsp;&nbsp;·&nbsp;&nbsp;
+      Powered by Wally
+      &nbsp;&nbsp;·&nbsp;&nbsp;
+      Sources: SearXNG + curated web
+      &nbsp;&nbsp;·&nbsp;&nbsp;
+      Updated daily
+    </p>
+    <p style="margin-top: 8px; font-size: 9px; opacity: 0.55;">
+      VOL. I &nbsp;·&nbsp; NO. 001 &nbsp;·&nbsp; MARCH 2, 2026
+    </p>
+  </footer>
+
 </body>
 </html>
