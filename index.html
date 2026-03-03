@@ -1,196 +1,770 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-  <title>Art Inspiration Daily — Tuesday, March 3, 2026</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Art Inspiration Daily</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=DM+Serif+Display:ital@0;1&family=Space+Mono&display=swap" rel="stylesheet" />
   <style>
-    :root{--bg:#0d0d0d;--surface:#161616;--surface2:#1e1e1e;--border:#2a2a2a;--accent:#e8c84a;--text:#f0f0f0;--muted:#888;}
-    *{box-sizing:border-box;margin:0;padding:0;}
-    body{background:var(--bg);color:var(--text);font-family:'Inter','Helvetica Neue',sans-serif;padding:0 0 80px;}
-    header{border-bottom:1px solid var(--border);padding:32px 40px 24px;display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:12px;}
-    .logo{font-size:11px;text-transform:uppercase;letter-spacing:.2em;color:var(--muted);margin-bottom:6px;}
-    h1{font-size:clamp(26px,5vw,46px);font-weight:700;letter-spacing:-.03em;line-height:1;}
-    h1 span{color:var(--accent);}
-    .date-badge{background:var(--surface2);border:1px solid var(--border);border-radius:6px;padding:8px 14px;font-size:13px;color:var(--muted);white-space:nowrap;}
-    .container{max-width:1100px;margin:0 auto;padding:48px 40px 0;}
-    .section-label{font-size:10px;text-transform:uppercase;letter-spacing:.25em;color:var(--muted);margin-bottom:20px;display:flex;align-items:center;gap:10px;}
-    .section-label::after{content:'';flex:1;height:1px;background:var(--border);}
-    .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:18px;margin-bottom:52px;}
-    .card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:22px;transition:border-color .2s,transform .2s;text-decoration:none;color:inherit;display:block;}
-    .card:hover{border-color:var(--accent);transform:translateY(-2px);}
-    .card-eyebrow{font-size:10px;text-transform:uppercase;letter-spacing:.2em;margin-bottom:8px;}
-    .card h3{font-size:15px;font-weight:600;line-height:1.35;margin-bottom:9px;letter-spacing:-.01em;}
-    .card p{font-size:13px;line-height:1.65;color:#aaa;}
-    .source-link{display:inline-block;margin-top:13px;font-size:11px;color:#38bdf8;text-decoration:none;border-bottom:1px solid transparent;transition:border-color .15s;}
-    .source-link:hover{border-color:#38bdf8;}
-    .pulse{display:inline-block;width:7px;height:7px;border-radius:50%;background:#4ade80;margin-right:6px;animation:pulse 2s infinite;}
-    @keyframes pulse{0%,100%{opacity:1;}50%{opacity:.3;}}
-    footer{text-align:center;margin-top:64px;font-size:12px;color:var(--muted);border-top:1px solid var(--border);padding-top:24px;}
-    @media(max-width:600px){header,.container{padding-left:20px;padding-right:20px;}}
+    :root {
+      --bg: #0F0F0F;
+      --c1: #FF3366;
+      --c2: #00E5FF;
+      --c3: #FFD600;
+      --c4: #7B2FFF;
+      --c5: #FF6B00;
+      --c6: #00FF9F;
+      --text: #FFFFFF;
+      --text-dark: #0F0F0F;
+      --surface: #1A1A1A;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Space Mono', monospace;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* MASTHEAD */
+    .masthead {
+      background: var(--c1);
+      position: relative;
+      overflow: hidden;
+      padding: 72px 60px 88px;
+      min-height: 380px;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .geo-circle-lg {
+      position: absolute;
+      width: 360px;
+      height: 360px;
+      border-radius: 50%;
+      background: var(--c2);
+      opacity: 0.2;
+      top: -90px;
+      right: -70px;
+      pointer-events: none;
+    }
+
+    .geo-circle-outline {
+      position: absolute;
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 4px solid var(--c3);
+      opacity: 0.45;
+      top: 48px;
+      right: 220px;
+      pointer-events: none;
+    }
+
+    .geo-square {
+      position: absolute;
+      width: 220px;
+      height: 220px;
+      background: var(--c3);
+      opacity: 0.28;
+      bottom: -90px;
+      left: 44px;
+      transform: rotate(38deg);
+      pointer-events: none;
+    }
+
+    .geo-dot {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: var(--c4);
+      opacity: 0.35;
+      bottom: 40px;
+      right: 120px;
+      pointer-events: none;
+    }
+
+    .masthead-content {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .masthead-vol {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      color: rgba(255,255,255,0.6);
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+
+    .masthead-title {
+      font-family: 'Unbounded', sans-serif;
+      font-weight: 900;
+      font-size: clamp(60px, 10.5vw, 120px);
+      line-height: 0.88;
+      letter-spacing: -0.04em;
+      color: #FFFFFF;
+      text-transform: uppercase;
+    }
+
+    .masthead-digest {
+      font-family: 'Space Mono', monospace;
+      font-size: 13px;
+      color: rgba(255,255,255,0.78);
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-top: 30px;
+    }
+
+    .masthead-date {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      color: rgba(255,255,255,0.55);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-top: 52px;
+      text-align: right;
+      align-self: flex-end;
+    }
+
+    /* COLOR FIELD DIVIDERS */
+    .color-divider {
+      display: flex;
+      width: 100%;
+      height: 60px;
+      align-items: flex-end;
+      overflow: hidden;
+    }
+
+    .color-divider span {
+      flex: 1;
+      display: block;
+    }
+
+    /* SECTIONS */
+    .art-section {
+      position: relative;
+    }
+
+    .art-section--tinted {
+      position: relative;
+    }
+
+    .art-section--tinted::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--sc);
+      opacity: 0.055;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Section Header Bar */
+    .section-header-bar {
+      position: relative;
+      background: var(--sc);
+      padding: 26px 60px 30px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+    }
+
+    .section-num {
+      font-family: 'Unbounded', sans-serif;
+      font-weight: 900;
+      font-size: clamp(90px, 16vw, 190px);
+      color: rgba(0,0,0,0.11);
+      line-height: 1;
+      position: absolute;
+      right: 44px;
+      top: 50%;
+      transform: translateY(-50%);
+      letter-spacing: -0.05em;
+      user-select: none;
+      pointer-events: none;
+    }
+
+    .section-num--light {
+      color: rgba(255,255,255,0.13);
+    }
+
+    .section-name {
+      font-family: 'Unbounded', sans-serif;
+      font-weight: 900;
+      font-size: clamp(22px, 3.6vw, 46px);
+      color: var(--text-dark);
+      text-transform: uppercase;
+      letter-spacing: -0.02em;
+      position: relative;
+      z-index: 1;
+      line-height: 1;
+    }
+
+    .section-name--light {
+      color: #FFFFFF;
+    }
+
+    /* Section Content */
+    .section-content {
+      position: relative;
+      z-index: 1;
+      padding: 36px 60px 64px;
+    }
+
+    /* FEATURED CARD */
+    .featured-card {
+      display: block;
+      text-decoration: none;
+      background: var(--surface);
+      border-left: 5px solid var(--sc);
+      border-top: 10px solid var(--sc);
+      padding: 40px;
+      margin-bottom: 20px;
+      transition: background 0.22s ease, border-color 0.22s ease;
+    }
+
+    .featured-card .card-category {
+      font-family: 'Unbounded', sans-serif;
+      font-weight: 700;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.24em;
+      color: var(--sc);
+      margin-bottom: 20px;
+      transition: color 0.22s;
+      display: block;
+    }
+
+    .featured-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 44px;
+    }
+
+    .featured-left {
+      border-right: 1px solid #2A2A2A;
+      padding-right: 44px;
+      transition: border-color 0.22s;
+    }
+
+    .featured-card .card-headline {
+      font-family: 'DM Serif Display', serif;
+      font-style: italic;
+      font-size: clamp(24px, 2.8vw, 36px);
+      line-height: 1.14;
+      color: #FFFFFF;
+      margin-bottom: 18px;
+      transition: color 0.22s;
+      display: block;
+    }
+
+    .featured-card .card-body {
+      font-family: 'Space Mono', monospace;
+      font-size: 13px;
+      line-height: 1.88;
+      color: #888;
+      transition: color 0.22s;
+    }
+
+    .featured-card .card-body-right {
+      font-family: 'Space Mono', monospace;
+      font-size: 13px;
+      line-height: 1.88;
+      color: #5A5A5A;
+      font-style: italic;
+      transition: color 0.22s;
+    }
+
+    .card-source {
+      display: inline-block;
+      margin-top: 22px;
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      color: var(--sc);
+      letter-spacing: 0.1em;
+      transition: color 0.22s;
+    }
+
+    .featured-card:hover {
+      background: var(--sc);
+      border-left-color: rgba(0,0,0,0.25);
+      border-top-color: rgba(0,0,0,0.25);
+    }
+
+    .featured-card:hover .card-category,
+    .featured-card:hover .card-headline,
+    .featured-card:hover .card-body,
+    .featured-card:hover .card-body-right,
+    .featured-card:hover .card-source {
+      color: var(--text-dark);
+    }
+
+    .featured-card:hover .featured-left {
+      border-right-color: rgba(0,0,0,0.15);
+    }
+
+    /* CARD GRID */
+    .card-grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    .card-grid--solo {
+      grid-template-columns: 1fr;
+    }
+
+    .card-grid--duo {
+      grid-template-columns: 3fr 2fr;
+    }
+
+    .card-grid--duo .card:first-child {
+      min-height: 260px;
+    }
+
+    /* CARD */
+    .card {
+      display: block;
+      text-decoration: none;
+      background: var(--surface);
+      border-left: 4px solid var(--sc);
+      padding: 30px;
+      transition: background 0.22s ease;
+    }
+
+    .card .card-category {
+      font-family: 'Unbounded', sans-serif;
+      font-weight: 700;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.24em;
+      color: var(--sc);
+      margin-bottom: 13px;
+      transition: color 0.22s;
+      display: block;
+    }
+
+    .card .card-headline {
+      font-family: 'DM Serif Display', serif;
+      font-style: italic;
+      font-size: clamp(18px, 1.8vw, 23px);
+      line-height: 1.2;
+      color: #FFFFFF;
+      margin-bottom: 13px;
+      transition: color 0.22s;
+      display: block;
+    }
+
+    .card .card-body {
+      font-family: 'Space Mono', monospace;
+      font-size: 13px;
+      line-height: 1.8;
+      color: #888;
+      transition: color 0.22s;
+    }
+
+    .card .card-source {
+      display: inline-block;
+      margin-top: 18px;
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      color: var(--sc);
+      letter-spacing: 0.1em;
+      transition: color 0.22s;
+    }
+
+    .card:hover {
+      background: var(--sc);
+    }
+
+    .card:hover .card-category,
+    .card:hover .card-headline,
+    .card:hover .card-body,
+    .card:hover .card-source {
+      color: var(--text-dark);
+    }
+
+    /* FOOTER */
+    .site-footer {
+      background: #080808;
+      border-top: 2px solid #1C1C1C;
+      padding: 48px 60px;
+      text-align: center;
+    }
+
+    .site-footer p {
+      font-family: 'Space Mono', monospace;
+      font-size: 11px;
+      color: #333;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      line-height: 2.4;
+    }
+
+    .footer-accent { color: var(--c1); }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .masthead { padding: 52px 32px 72px; min-height: 300px; }
+      .geo-circle-lg { width: 220px; height: 220px; right: -50px; top: -50px; }
+      .geo-circle-outline { width: 80px; height: 80px; right: 120px; }
+      .geo-square { width: 140px; height: 140px; }
+      .geo-dot { display: none; }
+      .section-header-bar { padding: 22px 32px 26px; }
+      .section-num { font-size: 80px; right: 28px; }
+      .section-content { padding: 28px 32px 52px; }
+      .featured-card { padding: 28px; }
+      .featured-inner { grid-template-columns: 1fr; gap: 28px; }
+      .featured-left { border-right: none; padding-right: 0; border-bottom: 1px solid #2A2A2A; padding-bottom: 24px; }
+      .card-grid--duo { grid-template-columns: 1fr; }
+      .card-grid--duo .card:first-child { min-height: auto; }
+      .site-footer { padding: 40px 32px; }
+    }
+
+    @media (max-width: 500px) {
+      .masthead { padding: 40px 20px 60px; }
+      .section-content { padding: 20px 20px 40px; }
+      .section-header-bar { padding: 18px 20px 20px; }
+    }
   </style>
 </head>
 <body>
-  <header>
-    <div>
-      <div class="logo">Art Inspiration Daily</div>
-      <h1>What's <span>moving</span> right now.</h1>
-    </div>
-    <div class="date-badge"><span class="pulse"></span> Tuesday, March 3, 2026</div>
-  </header>
-  <div class="container">
-    
-    <div class="section-label">🤖 AI &amp; Generative Art</div>
-    <div class="grid">
-      <a class="card" href="https://www.creativebloq.com/art/tattoo-body-art-design" target="_blank" rel="noopener">
-        <div class="card-eyebrow" style="color:#e8c84a">www.creativebloq.com</div>
-        <h3>Tattoo &amp; Body Art</h3>
-        <p>From Creative Bloq</p>
-        <span class="source-link">www.creativebloq.com ↗</span>
-      </a>
-      <a class="card" href="https://www.creativebloq.com/art/traditional-art" target="_blank" rel="noopener">
-        <div class="card-eyebrow" style="color:#e8c84a">www.creativebloq.com</div>
-        <h3>Traditional Art</h3>
-        <p>From Creative Bloq</p>
-        <span class="source-link">www.creativebloq.com ↗</span>
-      </a>
-      <a class="card" href="https://www.creativebloq.com/3d/video-game-design" target="_blank" rel="noopener">
-        <div class="card-eyebrow" style="color:#e8c84a">www.creativebloq.com</div>
-        <h3>Video Game Design</h3>
-        <p>From Creative Bloq</p>
-        <span class="source-link">www.creativebloq.com ↗</span>
-      </a>
-      <a class="card" href="https://www.creativebloq.com/professional-development" target="_blank" rel="noopener">
-        <div class="card-eyebrow" style="color:#e8c84a">www.creativebloq.com</div>
-        <h3>Professional Development</h3>
-        <p>From Creative Bloq</p>
-        <span class="source-link">www.creativebloq.com ↗</span>
-      </a>
-      <a class="card" href="https://www.creativebloq.com/professional-development/productivity-tools" target="_blank" rel="noopener">
-        <div class="card-eyebrow" style="color:#e8c84a">www.creativebloq.com</div>
-        <h3>Productivity Tools</h3>
-        <p>From Creative Bloq</p>
-        <span class="source-link">www.creativebloq.com ↗</span>
-      </a>
-      <a class="card" href="https://www.creativebloq.com/professional-development/training-courses" target="_blank" rel="noopener">
-        <div class="card-eyebrow" style="color:#e8c84a">www.creativebloq.com</div>
-        <h3>Training Courses</h3>
-        <p>From Creative Bloq</p>
-        <span class="source-link">www.creativebloq.com ↗</span>
-      </a></div>
-    <div class="section-label">🖥️ UI/UX, Typography &amp; Branding</div>
-    <div class="grid">
-      <a class="card" href="https://itunes.apple.com/us/app/behance/id489667151" target="_blank" rel="noopener">
-        <div class="card-eyebrow" style="color:#38bdf8">itunes.apple.com</div>
-        <h3>Download on the App Store</h3>
-        <p>From Behance UI/UX</p>
-        <span class="source-link">itunes.apple.com ↗</span>
-      </a>
-      <a class="card" href="https://play.google.com/store/apps/details?id=com.behance.behance" target="_blank" rel="noopener">
-        <div class="card-eyebrow" style="color:#38bdf8">play.google.com</div>
-        <h3>Get it on Google Play</h3>
-        <p>From Behance UI/UX</p>
-        <span class="source-link">play.google.com ↗</span>
-      </a>
-      <a class="card" href="https://portfolio.adobe.com/start?promoid=2K4PC6LW&amp;mv=other" target="_blank" rel="noopener">
-        <div class="card-eyebrow" style="color:#38bdf8">portfolio.adobe.com</div>
-        <h3>Adobe Portfolio</h3>
-        <p>From Behance UI/UX</p>
-        <span class="source-link">portfolio.adobe.com ↗</span>
-      </a>
-      <a class="card" href="https://www.adobe.com?promoid=TTGWL148" target="_blank" rel="noopener">
-        <div class="card-eyebrow" style="color:#38bdf8">www.adobe.com?promoid=TTGWL148</div>
-        <h3>Go to adobe.com</h3>
-        <p>From Behance UI/UX</p>
-        <span class="source-link">www.adobe.com?promoid=TTGWL148 ↗</span>
-      </a>
-      <a class="card" href="https://www.adobe.com/express/?geocheck=on&amp;mv=other&amp;promoid=8WLD4Y3J" target="_blank" rel="noopener">
-        <div class="card-eyebrow" style="color:#38bdf8">www.adobe.com</div>
-        <h3>Get Adobe Express free</h3>
-        <p>From Behance UI/UX</p>
-        <span class="source-link">www.adobe.com ↗</span>
-      </a>
-      <a class="card" href="https://www.behance.net/sigmasoftwaredesign" target="_blank" rel="noopener">
-        <div class="card-eyebrow" style="color:#38bdf8">www.behance.net</div>
-        <h3>Sigma Software Design</h3>
-        <p>From Behance UI/UX</p>
-        <span class="source-link">www.behance.net ↗</span>
-      </a></div>
-    <div class="section-label">🎨 Illustration, Fine Art &amp; Mixed Media</div>
-    <div class="grid">
-      <a class="card" href="https://www.itsnicethat.com/projects-creatives" target="_blank" rel="noopener">
-        <div class="card-eyebrow" style="color:#f97316">www.itsnicethat.com</div>
-        <h3>Projects + Creatives</h3>
-        <p>From It's Nice That</p>
-        <span class="source-link">www.itsnicethat.com ↗</span>
-      </a>
-      <a class="card" href="https://www.itsnicethat.com/insights-opinion" target="_blank" rel="noopener">
-        <div class="card-eyebrow" style="color:#f97316">www.itsnicethat.com</div>
-        <h3>Insights + Opinion</h3>
-        <p>From It's Nice That</p>
-        <span class="source-link">www.itsnicethat.com ↗</span>
-      </a>
-      <a class="card" href="https://www.itsnicethat.com/resources-advice" target="_blank" rel="noopener">
-        <div class="card-eyebrow" style="color:#f97316">www.itsnicethat.com</div>
-        <h3>Resources + Advice</h3>
-        <p>From It's Nice That</p>
-        <span class="source-link">www.itsnicethat.com ↗</span>
-      </a>
-      <a class="card" href="https://www.itsnicethat.com/culture-lifestyle" target="_blank" rel="noopener">
-        <div class="card-eyebrow" style="color:#f97316">www.itsnicethat.com</div>
-        <h3>Culture + Lifestyle</h3>
-        <p>From It's Nice That</p>
-        <span class="source-link">www.itsnicethat.com ↗</span>
-      </a>
-      <a class="card" href="https://www.itsnicethat.com/work-with-us" target="_blank" rel="noopener">
-        <div class="card-eyebrow" style="color:#f97316">www.itsnicethat.com</div>
-        <h3>Advertising Opportunities</h3>
-        <p>From It's Nice That</p>
-        <span class="source-link">www.itsnicethat.com ↗</span>
-      </a>
-      <a class="card" href="https://www.itsnicethat.com/the-view-from" target="_blank" rel="noopener">
-        <div class="card-eyebrow" style="color:#f97316">www.itsnicethat.com</div>
-        <h3>The View From...</h3>
-        <p>From It's Nice That</p>
-        <span class="source-link">www.itsnicethat.com ↗</span>
-      </a>
-      <a class="card" href="https://www.artnews.com/c/art-news/product-recommendations/" target="_blank" rel="noopener">
-        <div class="card-eyebrow" style="color:#f97316">www.artnews.com</div>
-        <h3>ARTnews Recommends</h3>
-        <p>From Art News</p>
-        <span class="source-link">www.artnews.com ↗</span>
-      </a>
-      <a class="card" href="https://www.artnews.com/art-collectors/top-200-collectors/top-200-collectors/" target="_blank" rel="noopener">
-        <div class="card-eyebrow" style="color:#f97316">www.artnews.com</div>
-        <h3>Top 200 Collectors</h3>
-        <p>From Art News</p>
-        <span class="source-link">www.artnews.com ↗</span>
-      </a>
-      <a class="card" href="https://www.artnews.com/list/art-news/news/spring-art-preview-1234774768/" target="_blank" rel="noopener">
-        <div class="card-eyebrow" style="color:#f97316">www.artnews.com</div>
-        <h3>74 Museum Exhibitions and Biennials to See This&nbsp;Spring</h3>
-        <p>From Art News</p>
-        <span class="source-link">www.artnews.com ↗</span>
-      </a>
-      <a class="card" href="https://www.artnews.com/art-news/news/diya-vij-new-york-city-commissioner-of-cultural-affairs-1234775079/" target="_blank" rel="noopener">
-        <div class="card-eyebrow" style="color:#f97316">www.artnews.com</div>
-        <h3>Curator Diya Vij Picked as New York City’s Next Commissioner of Cultural&nbsp;Affairs</h3>
-        <p>From Art News</p>
-        <span class="source-link">www.artnews.com ↗</span>
-      </a>
-      <a class="card" href="https://www.artnews.com/art-news/news/sva-shutting-down-mfa-curatorial-practice-program-1234775014/" target="_blank" rel="noopener">
-        <div class="card-eyebrow" style="color:#f97316">www.artnews.com</div>
-        <h3>SVA Is Shutting Down Its MFA in Curatorial Practice&nbsp;Program</h3>
-        <p>From Art News</p>
-        <span class="source-link">www.artnews.com ↗</span>
-      </a>
-      <a class="card" href="https://www.artnews.com/list/art-news/artists/artworks-digital-art-streaming-platform-cifra-1234774983/" target="_blank" rel="noopener">
-        <div class="card-eyebrow" style="color:#f97316">www.artnews.com</div>
-        <h3>6 Must-See Artworks on Digital Art Streaming Platform&nbsp;CIFRA</h3>
-        <p>From Art News</p>
-        <span class="source-link">www.artnews.com ↗</span>
-      </a></div>
+
+<!-- MASTHEAD -->
+<header class="masthead">
+  <div class="geo-circle-lg" aria-hidden="true"></div>
+  <div class="geo-circle-outline" aria-hidden="true"></div>
+  <div class="geo-square" aria-hidden="true"></div>
+  <div class="geo-dot" aria-hidden="true"></div>
+
+  <div class="masthead-content">
+    <div class="masthead-vol">Vol. I &nbsp;&middot;&nbsp; No. 001</div>
+    <h1 class="masthead-title">Art<br>Inspiration</h1>
+    <p class="masthead-digest">Daily Digest</p>
+    <p class="masthead-date">March 2, 2026</p>
   </div>
-  <footer>Art Inspiration Daily &nbsp;·&nbsp; Powered by Wally &nbsp;·&nbsp; Refreshed 2026-03-03 &nbsp;·&nbsp; Sources: SearXNG multi-engine search</footer>
+</header>
+
+<!-- Divider 1 -->
+<div class="color-divider" aria-hidden="true">
+  <span style="background:var(--c3);height:52px"></span>
+  <span style="background:var(--c2);height:28px"></span>
+  <span style="background:var(--c4);height:46px"></span>
+  <span style="background:var(--c1);height:20px"></span>
+  <span style="background:var(--c5);height:42px"></span>
+  <span style="background:var(--c6);height:36px"></span>
+  <span style="background:var(--c2);height:56px"></span>
+  <span style="background:var(--c3);height:24px"></span>
+  <span style="background:var(--c1);height:50px"></span>
+  <span style="background:var(--c5);height:32px"></span>
+  <span style="background:var(--c4);height:44px"></span>
+  <span style="background:var(--c6);height:18px"></span>
+  <span style="background:var(--c3);height:58px"></span>
+  <span style="background:var(--c2);height:30px"></span>
+</div>
+
+<!-- I. CLASSICAL & TRADITIONAL -->
+<section class="art-section" style="--sc: var(--c1)">
+  <div class="section-header-bar">
+    <span class="section-name">Classical &amp; Traditional</span>
+    <span class="section-num" aria-hidden="true">01</span>
+  </div>
+  <div class="section-content">
+    <a class="featured-card" href="https://www.itsnicethat.com/projects-creatives" target="_blank" rel="noopener">
+      <span class="card-category">Featured</span>
+      <div class="featured-inner">
+        <div class="featured-left">
+          <span class="card-headline">Projects + Creatives</span>
+          <p class="card-body">via It's Nice That</p>
+          <span class="card-source">www.itsnicethat.com &nbsp;&uarr;</span>
+        </div>
+        <div>
+          <p class="card-body-right">Selected from today&#8217;s art &amp; design feed &mdash; 2026-03-03</p>
+        </div>
+      </div>
+    </a>
+<div class="card-grid card-grid--duo">    <a class="card" href="https://www.itsnicethat.com/insights-opinion" target="_blank" rel="noopener">
+      <span class="card-category">www.itsnicethat.com</span>
+      <span class="card-headline">Insights + Opinion</span>
+      <p class="card-body">via It's Nice That</p>
+      <span class="card-source">www.itsnicethat.com &nbsp;&uarr;</span>
+    </a>    <a class="card" href="https://www.itsnicethat.com/resources-advice" target="_blank" rel="noopener">
+      <span class="card-category">www.itsnicethat.com</span>
+      <span class="card-headline">Resources + Advice</span>
+      <p class="card-body">via It's Nice That</p>
+      <span class="card-source">www.itsnicethat.com &nbsp;&uarr;</span>
+    </a>    <a class="card" href="https://www.itsnicethat.com/culture-lifestyle" target="_blank" rel="noopener">
+      <span class="card-category">www.itsnicethat.com</span>
+      <span class="card-headline">Culture + Lifestyle</span>
+      <p class="card-body">via It's Nice That</p>
+      <span class="card-source">www.itsnicethat.com &nbsp;&uarr;</span>
+    </a></div>
+  </div>
+</section>
+
+<!-- Divider 2 -->
+<div class="color-divider" aria-hidden="true">
+  <span style="background:var(--c4);height:48px"></span>
+  <span style="background:var(--c5);height:30px"></span>
+  <span style="background:var(--c6);height:54px"></span>
+  <span style="background:var(--c2);height:22px"></span>
+  <span style="background:var(--c1);height:44px"></span>
+  <span style="background:var(--c3);height:58px"></span>
+  <span style="background:var(--c4);height:28px"></span>
+  <span style="background:var(--c5);height:50px"></span>
+  <span style="background:var(--c6);height:36px"></span>
+  <span style="background:var(--c2);height:54px"></span>
+  <span style="background:var(--c1);height:22px"></span>
+  <span style="background:var(--c3);height:46px"></span>
+  <span style="background:var(--c4);height:60px"></span>
+  <span style="background:var(--c5);height:26px"></span>
+</div>
+
+<!-- II. DIGITAL & GENERATIVE -->
+<section class="art-section art-section--tinted" style="--sc: var(--c2)">
+  <div class="section-header-bar">
+    <span class="section-name">Digital &amp; Generative</span>
+    <span class="section-num" aria-hidden="true">02</span>
+  </div>
+  <div class="section-content">
+    <a class="featured-card" href="https://www.creativebloq.com/art/tattoo-body-art-design" target="_blank" rel="noopener">
+      <span class="card-category">Featured</span>
+      <div class="featured-inner">
+        <div class="featured-left">
+          <span class="card-headline">Tattoo &amp; Body Art</span>
+          <p class="card-body">via Creative Bloq AI</p>
+          <span class="card-source">www.creativebloq.com &nbsp;&uarr;</span>
+        </div>
+        <div>
+          <p class="card-body-right">Selected from today&#8217;s art &amp; design feed &mdash; 2026-03-03</p>
+        </div>
+      </div>
+    </a>
+<div class="card-grid card-grid--duo">    <a class="card" href="https://www.creativebloq.com/art/traditional-art" target="_blank" rel="noopener">
+      <span class="card-category">www.creativebloq.com</span>
+      <span class="card-headline">Traditional Art</span>
+      <p class="card-body">via Creative Bloq AI</p>
+      <span class="card-source">www.creativebloq.com &nbsp;&uarr;</span>
+    </a>    <a class="card" href="https://www.creativebloq.com/design/graphic-design" target="_blank" rel="noopener">
+      <span class="card-category">www.creativebloq.com</span>
+      <span class="card-headline">Graphic Design</span>
+      <p class="card-body">via Creative Bloq AI</p>
+      <span class="card-source">www.creativebloq.com &nbsp;&uarr;</span>
+    </a>    <a class="card" href="https://www.creativebloq.com/design/product-design" target="_blank" rel="noopener">
+      <span class="card-category">www.creativebloq.com</span>
+      <span class="card-headline">Product Design</span>
+      <p class="card-body">via Creative Bloq AI</p>
+      <span class="card-source">www.creativebloq.com &nbsp;&uarr;</span>
+    </a>    <a class="card" href="https://www.creativebloq.com/3d/video-game-design" target="_blank" rel="noopener">
+      <span class="card-category">www.creativebloq.com</span>
+      <span class="card-headline">Video Game Design</span>
+      <p class="card-body">via Creative Bloq AI</p>
+      <span class="card-source">www.creativebloq.com &nbsp;&uarr;</span>
+    </a>    <a class="card" href="https://www.creativebloq.com/professional-development" target="_blank" rel="noopener">
+      <span class="card-category">www.creativebloq.com</span>
+      <span class="card-headline">Professional Development</span>
+      <p class="card-body">via Creative Bloq AI</p>
+      <span class="card-source">www.creativebloq.com &nbsp;&uarr;</span>
+    </a></div>
+  </div>
+</section>
+
+<!-- Divider 3 -->
+<div class="color-divider" aria-hidden="true">
+  <span style="background:var(--c6);height:36px"></span>
+  <span style="background:var(--c1);height:54px"></span>
+  <span style="background:var(--c3);height:28px"></span>
+  <span style="background:var(--c5);height:50px"></span>
+  <span style="background:var(--c2);height:40px"></span>
+  <span style="background:var(--c4);height:58px"></span>
+  <span style="background:var(--c1);height:24px"></span>
+  <span style="background:var(--c6);height:46px"></span>
+  <span style="background:var(--c3);height:54px"></span>
+  <span style="background:var(--c5);height:30px"></span>
+  <span style="background:var(--c2);height:48px"></span>
+  <span style="background:var(--c4);height:20px"></span>
+  <span style="background:var(--c6);height:56px"></span>
+  <span style="background:var(--c1);height:34px"></span>
+</div>
+
+<!-- III. STREET & URBAN -->
+<section class="art-section" style="--sc: var(--c3)">
+  <div class="section-header-bar">
+    <span class="section-name">Street &amp; Urban</span>
+    <span class="section-num" aria-hidden="true">03</span>
+  </div>
+  <div class="section-content">
+    <a class="featured-card" href="https://www.itsnicethat.com/work-with-us" target="_blank" rel="noopener">
+      <span class="card-category">Featured</span>
+      <div class="featured-inner">
+        <div class="featured-left">
+          <span class="card-headline">Advertising Opportunities</span>
+          <p class="card-body">via It's Nice That</p>
+          <span class="card-source">www.itsnicethat.com &nbsp;&uarr;</span>
+        </div>
+        <div>
+          <p class="card-body-right">Selected from today&#8217;s art &amp; design feed &mdash; 2026-03-03</p>
+        </div>
+      </div>
+    </a>
+<div class="card-grid card-grid--duo">    <a class="card" href="https://www.itsnicethat.com/the-view-from" target="_blank" rel="noopener">
+      <span class="card-category">www.itsnicethat.com</span>
+      <span class="card-headline">The View From...</span>
+      <p class="card-body">via It's Nice That</p>
+      <span class="card-source">www.itsnicethat.com &nbsp;&uarr;</span>
+    </a>    <a class="card" href="https://www.artnews.com/c/art-news/product-recommendations/" target="_blank" rel="noopener">
+      <span class="card-category">www.artnews.com</span>
+      <span class="card-headline">ARTnews Recommends</span>
+      <p class="card-body">via Art News</p>
+      <span class="card-source">www.artnews.com &nbsp;&uarr;</span>
+    </a></div>
+  </div>
+</section>
+
+<!-- Divider 4 -->
+<div class="color-divider" aria-hidden="true">
+  <span style="background:var(--c2);height:44px"></span>
+  <span style="background:var(--c4);height:58px"></span>
+  <span style="background:var(--c1);height:32px"></span>
+  <span style="background:var(--c6);height:50px"></span>
+  <span style="background:var(--c3);height:24px"></span>
+  <span style="background:var(--c5);height:54px"></span>
+  <span style="background:var(--c2);height:40px"></span>
+  <span style="background:var(--c1);height:58px"></span>
+  <span style="background:var(--c4);height:28px"></span>
+  <span style="background:var(--c6);height:46px"></span>
+  <span style="background:var(--c5);height:36px"></span>
+  <span style="background:var(--c3);height:54px"></span>
+  <span style="background:var(--c2);height:22px"></span>
+  <span style="background:var(--c4);height:48px"></span>
+</div>
+
+<!-- IV. PHOTOGRAPHY -->
+<section class="art-section art-section--tinted" style="--sc: var(--c4)">
+  <div class="section-header-bar">
+    <span class="section-name section-name--light">Photography</span>
+    <span class="section-num section-num--light" aria-hidden="true">04</span>
+  </div>
+  <div class="section-content">
+    <a class="featured-card" href="https://www.artnews.com/art-collectors/top-200-collectors/top-200-collectors/" target="_blank" rel="noopener">
+      <span class="card-category">Featured</span>
+      <div class="featured-inner">
+        <div class="featured-left">
+          <span class="card-headline">Top 200 Collectors</span>
+          <p class="card-body">via Art News</p>
+          <span class="card-source">www.artnews.com &nbsp;&uarr;</span>
+        </div>
+        <div>
+          <p class="card-body-right">Selected from today&#8217;s art &amp; design feed &mdash; 2026-03-03</p>
+        </div>
+      </div>
+    </a>
+<div class="card-grid card-grid--duo">    <a class="card" href="https://www.artnews.com/p/artnews-digital-issues/" target="_blank" rel="noopener">
+      <span class="card-category">www.artnews.com</span>
+      <span class="card-headline">Digital Issues</span>
+      <p class="card-body">via Art News</p>
+      <span class="card-source">www.artnews.com &nbsp;&uarr;</span>
+    </a>    <a class="card" href="https://www.artnews.com/p/artnews-awards-2025/" target="_blank" rel="noopener">
+      <span class="card-category">www.artnews.com</span>
+      <span class="card-headline">ARTnews Awards</span>
+      <p class="card-body">via Art News</p>
+      <span class="card-source">www.artnews.com &nbsp;&uarr;</span>
+    </a></div>
+  </div>
+</section>
+
+<!-- Divider 5 -->
+<div class="color-divider" aria-hidden="true">
+  <span style="background:var(--c5);height:54px"></span>
+  <span style="background:var(--c3);height:36px"></span>
+  <span style="background:var(--c6);height:50px"></span>
+  <span style="background:var(--c1);height:28px"></span>
+  <span style="background:var(--c4);height:58px"></span>
+  <span style="background:var(--c2);height:42px"></span>
+  <span style="background:var(--c5);height:24px"></span>
+  <span style="background:var(--c3);height:54px"></span>
+  <span style="background:var(--c6);height:46px"></span>
+  <span style="background:var(--c1);height:32px"></span>
+  <span style="background:var(--c4);height:50px"></span>
+  <span style="background:var(--c2);height:58px"></span>
+  <span style="background:var(--c5);height:30px"></span>
+  <span style="background:var(--c3);height:44px"></span>
+</div>
+
+<!-- V. DESIGN & TYPOGRAPHY -->
+<section class="art-section" style="--sc: var(--c5)">
+  <div class="section-header-bar">
+    <span class="section-name">Design &amp; Typography</span>
+    <span class="section-num" aria-hidden="true">05</span>
+  </div>
+  <div class="section-content">
+    <a class="featured-card" href="https://itunes.apple.com/us/app/behance/id489667151" target="_blank" rel="noopener">
+      <span class="card-category">Featured</span>
+      <div class="featured-inner">
+        <div class="featured-left">
+          <span class="card-headline">Download on the App Store</span>
+          <p class="card-body">via Behance</p>
+          <span class="card-source">itunes.apple.com &nbsp;&uarr;</span>
+        </div>
+        <div>
+          <p class="card-body-right">Selected from today&#8217;s art &amp; design feed &mdash; 2026-03-03</p>
+        </div>
+      </div>
+    </a>
+<div class="card-grid card-grid--duo">    <a class="card" href="https://play.google.com/store/apps/details?id=com.behance.behance" target="_blank" rel="noopener">
+      <span class="card-category">play.google.com</span>
+      <span class="card-headline">Get it on Google Play</span>
+      <p class="card-body">via Behance</p>
+      <span class="card-source">play.google.com &nbsp;&uarr;</span>
+    </a>    <a class="card" href="https://portfolio.adobe.com/start?promoid=2K4PC6LW&amp;mv=other" target="_blank" rel="noopener">
+      <span class="card-category">portfolio.adobe.com</span>
+      <span class="card-headline">Adobe Portfolio</span>
+      <p class="card-body">via Behance</p>
+      <span class="card-source">portfolio.adobe.com &nbsp;&uarr;</span>
+    </a>    <a class="card" href="https://www.adobe.com?promoid=TTGWL148" target="_blank" rel="noopener">
+      <span class="card-category">www.adobe.com?promoid=TTGWL148</span>
+      <span class="card-headline">Go to adobe.com</span>
+      <p class="card-body">via Behance</p>
+      <span class="card-source">www.adobe.com?promoid=TTGWL148 &nbsp;&uarr;</span>
+    </a>    <a class="card" href="https://www.adobe.com/express/?geocheck=on&amp;mv=other&amp;promoid=8WLD4Y3J" target="_blank" rel="noopener">
+      <span class="card-category">www.adobe.com</span>
+      <span class="card-headline">Get Adobe Express free</span>
+      <p class="card-body">via Behance</p>
+      <span class="card-source">www.adobe.com &nbsp;&uarr;</span>
+    </a>    <a class="card" href="https://www.behance.net/sigmasoftwaredesign" target="_blank" rel="noopener">
+      <span class="card-category">www.behance.net</span>
+      <span class="card-headline">Sigma Software Design</span>
+      <p class="card-body">via Behance</p>
+      <span class="card-source">www.behance.net &nbsp;&uarr;</span>
+    </a></div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <p>
+    <span class="footer-accent">Art Inspiration Daily</span>
+    &nbsp;&nbsp;&middot;&nbsp;&nbsp;
+    Powered by Wally
+    &nbsp;&nbsp;&middot;&nbsp;&nbsp;
+    Sources: SearXNG + curated web
+    &nbsp;&nbsp;&middot;&nbsp;&nbsp;
+    Updated daily
+  </p>
+  <p style="margin-top:10px;font-size:10px;opacity:0.4;">VOL. I &nbsp;&middot;&nbsp; 2026-03-03</p>
+</footer>
+
 </body>
 </html>
