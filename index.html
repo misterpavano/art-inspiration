@@ -1,391 +1,431 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Art Inspiration — 2026-04-03</title>
-<style>
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    background: #0f0f0f;
-    color: #f5f0eb;
-    font-family: 'Palatino Linotype', Palatino, Georgia, serif;
-    font-size: 15px;
-    line-height: 1.8;
-    -webkit-font-smoothing: antialiased;
-  }
-  .container {
-    max-width: 680px;
-    margin: 0 auto;
-    padding: 48px 24px;
-  }
-  .header {
-    text-align: center;
-    margin-bottom: 48px;
-  }
-  .header h1 {
-    font-size: 24px;
-    font-weight: 400;
-    color: #f5f0eb;
-    letter-spacing: 6px;
-    text-transform: uppercase;
-  }
-  .header .rule {
-    width: 40px;
-    height: 1px;
-    background: #c9a84c;
-    margin: 16px auto;
-  }
-  .header .tagline {
-    font-size: 13px;
-    color: #8a8278;
-    font-style: italic;
-  }
-  .header .meta {
-    font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
-    font-size: 10px;
-    color: #5a5650;
-    margin-top: 12px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-  }
-  .section {
-    margin-bottom: 48px;
-  }
-  .section-label {
-    font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
-    font-size: 10px;
-    font-weight: 600;
-    color: #c9a84c;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    margin-bottom: 24px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid #1e1d1b;
-  }
-  .exhibit {
-    padding: 20px 0;
-    border-bottom: 1px solid #1a1918;
-  }
-  .exhibit:last-child {
-    border-bottom: none;
-  }
-  .exhibit-title a {
-    color: #f5f0eb;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 1.4;
-  }
-  .exhibit-title a:hover {
-    color: #c9a84c;
-  }
-  .exhibit-provenance {
-    font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
-    font-size: 11px;
-    color: #6a6560;
-    margin-top: 6px;
-    letter-spacing: 1px;
-  }
-  .exhibit-provenance .source {
-    color: #c9a84c;
-    opacity: 0.7;
-  }
-  .exhibit-note {
-    color: #a09888;
-    font-size: 14px;
-    margin-top: 10px;
-    line-height: 1.7;
-    font-style: italic;
-  }
-  .footer {
-    margin-top: 56px;
-    text-align: center;
-  }
-  .footer .rule {
-    width: 40px;
-    height: 1px;
-    background: #c9a84c;
-    margin: 0 auto 16px;
-  }
-  .footer p {
-    font-family: -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif;
-    font-size: 10px;
-    color: #4a4640;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-  }
-  @media (max-width: 600px) {
-    .container { padding: 32px 20px; }
-    .header h1 { font-size: 20px; letter-spacing: 4px; }
-    .exhibit-title a { font-size: 16px; }
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Art Inspiration &mdash; April 2, 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+  <style>
+
+    :root {
+      --bg: #0F0F0F;
+      --c1: #FF3366;
+      --c2: #00E5FF;
+      --c3: #FFD600;
+      --c4: #7B2FFF;
+      --c5: #FF6B00;
+      --c6: #00FF9F;
+      --text: #FFFFFF;
+      --text-dark: #0F0F0F;
+      --surface: #1A1A1A;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Space Mono', monospace;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    .masthead {
+      background: var(--c1);
+      position: relative;
+      overflow: hidden;
+      padding: 72px 60px 88px;
+      min-height: 380px;
+      display: flex;
+      align-items: flex-start;
+    }
+    .geo-circle-lg {
+      position: absolute; width: 360px; height: 360px; border-radius: 50%;
+      background: var(--c2); opacity: 0.2; top: -90px; right: -70px; pointer-events: none;
+    }
+    .geo-circle-outline {
+      position: absolute; width: 130px; height: 130px; border-radius: 50%;
+      border: 4px solid var(--c3); opacity: 0.45; top: 48px; right: 220px; pointer-events: none;
+    }
+    .geo-square {
+      position: absolute; width: 220px; height: 220px; background: var(--c3); opacity: 0.28;
+      bottom: -90px; left: 44px; transform: rotate(38deg); pointer-events: none;
+    }
+    .geo-dot {
+      position: absolute; width: 60px; height: 60px; border-radius: 50%; background: var(--c4);
+      opacity: 0.35; bottom: 40px; right: 120px; pointer-events: none;
+    }
+    .masthead-content { position: relative; z-index: 2; width: 100%; display: flex; flex-direction: column; }
+    .masthead-vol { font-family: 'Space Mono', monospace; font-size: 11px; color: rgba(255,255,255,0.6); letter-spacing: 0.22em; text-transform: uppercase; margin-bottom: 28px; }
+    .masthead-title { font-family: 'Unbounded', sans-serif; font-weight: 900; font-size: clamp(60px, 10.5vw, 120px); line-height: 0.88; letter-spacing: -0.04em; color: #FFFFFF; text-transform: uppercase; }
+    .masthead-digest { font-family: 'Space Mono', monospace; font-size: 13px; color: rgba(255,255,255,0.78); letter-spacing: 0.3em; text-transform: uppercase; margin-top: 30px; }
+    .masthead-date { font-family: 'Space Mono', monospace; font-size: 11px; color: rgba(255,255,255,0.55); letter-spacing: 0.15em; text-transform: uppercase; margin-top: 52px; text-align: right; align-self: flex-end; }
+    .color-divider { display: flex; width: 100%; height: 60px; align-items: flex-end; overflow: hidden; }
+    .color-divider span { flex: 1; display: block; }
+    .art-section { position: relative; }
+    .art-section--tinted { position: relative; }
+    .art-section--tinted::before { content: ''; position: absolute; inset: 0; background: var(--sc); opacity: 0.055; pointer-events: none; z-index: 0; }
+    .section-header-bar { position: relative; background: var(--sc); padding: 26px 60px 30px; overflow: hidden; display: flex; align-items: center; }
+    .section-num { font-family: 'Unbounded', sans-serif; font-weight: 900; font-size: clamp(90px, 16vw, 190px); color: rgba(0,0,0,0.11); line-height: 1; position: absolute; right: 44px; top: 50%; transform: translateY(-50%); letter-spacing: -0.05em; user-select: none; pointer-events: none; }
+    .section-num--light { color: rgba(255,255,255,0.13); }
+    .section-name { font-family: 'Unbounded', sans-serif; font-weight: 900; font-size: clamp(22px, 3.6vw, 46px); color: var(--text-dark); text-transform: uppercase; letter-spacing: -0.02em; position: relative; z-index: 1; line-height: 1; }
+    .section-name--light { color: #FFFFFF; }
+    .section-content { position: relative; z-index: 1; padding: 36px 60px 64px; }
+    .featured-card { display: block; text-decoration: none; background: var(--surface); border-left: 5px solid var(--sc); border-top: 10px solid var(--sc); padding: 40px; margin-bottom: 20px; transition: background 0.22s ease, border-color 0.22s ease; }
+    .featured-card .card-category { font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 10px; text-transform: uppercase; letter-spacing: 0.24em; color: var(--sc); margin-bottom: 20px; transition: color 0.22s; display: block; }
+    .featured-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; }
+    .featured-left { border-right: 1px solid #2A2A2A; padding-right: 44px; transition: border-color 0.22s; }
+    .featured-card .card-headline { font-family: 'DM Serif Display', serif; font-style: italic; font-size: clamp(24px, 2.8vw, 36px); line-height: 1.14; color: #FFFFFF; margin-bottom: 18px; transition: color 0.22s; display: block; }
+    .featured-card .card-body { font-family: 'Space Mono', monospace; font-size: 13px; line-height: 1.88; color: #888; transition: color 0.22s; }
+    .featured-card .card-body-right { font-family: 'Space Mono', monospace; font-size: 13px; line-height: 1.88; color: #5A5A5A; font-style: italic; transition: color 0.22s; }
+    .card-source { display: inline-block; margin-top: 22px; font-family: 'Space Mono', monospace; font-size: 11px; color: var(--sc); letter-spacing: 0.1em; transition: color 0.22s; }
+    .featured-card:hover { background: var(--sc); border-left-color: rgba(0,0,0,0.25); border-top-color: rgba(0,0,0,0.25); }
+    .featured-card:hover .card-category, .featured-card:hover .card-headline, .featured-card:hover .card-body, .featured-card:hover .card-body-right, .featured-card:hover .card-source { color: var(--text-dark); }
+    .featured-card:hover .featured-left { border-right-color: rgba(0,0,0,0.15); }
+    .card-grid { display: grid; gap: 16px; }
+    .card-grid--solo { grid-template-columns: 1fr; }
+    .card-grid--duo { grid-template-columns: 3fr 2fr; }
+    .card-grid--duo .card:first-child { min-height: 260px; }
+    .card-grid--trio { grid-template-columns: 1fr 1fr 1fr; }
+    .card { display: block; text-decoration: none; background: var(--surface); border-left: 4px solid var(--sc); padding: 30px; transition: background 0.22s ease; }
+    .card .card-category { font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 10px; text-transform: uppercase; letter-spacing: 0.24em; color: var(--sc); margin-bottom: 13px; transition: color 0.22s; display: block; }
+    .card .card-headline { font-family: 'DM Serif Display', serif; font-style: italic; font-size: clamp(18px, 1.8vw, 23px); line-height: 1.2; color: #FFFFFF; margin-bottom: 13px; transition: color 0.22s; display: block; }
+    .card .card-body { font-family: 'Space Mono', monospace; font-size: 13px; line-height: 1.8; color: #888; transition: color 0.22s; }
+    .card .card-source { display: inline-block; margin-top: 18px; font-family: 'Space Mono', monospace; font-size: 11px; color: var(--sc); letter-spacing: 0.1em; transition: color 0.22s; }
+    .card:hover { background: var(--sc); }
+    .card:hover .card-category, .card:hover .card-headline, .card:hover .card-body, .card:hover .card-source { color: var(--text-dark); }
+    .empty-section { font-family: 'Space Mono', monospace; font-size: 13px; color: #3A3A3A; letter-spacing: 0.1em; padding: 48px 0; text-align: center; }
+    .returning-badge { display: inline-block; font-family: 'Space Mono', monospace; font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; background: var(--sc); color: var(--text-dark); padding: 2px 7px; margin-left: 10px; vertical-align: middle; opacity: 0.7; }
+    .card-grid--quad { grid-template-columns: 1fr 1fr; }
+    .site-footer { background: #080808; border-top: 2px solid #1C1C1C; padding: 48px 60px; text-align: center; }
+    .site-footer p { font-family: 'Space Mono', monospace; font-size: 11px; color: #333; letter-spacing: 0.16em; text-transform: uppercase; line-height: 2.4; }
+    .footer-accent { color: var(--c1); }
+    @media (max-width: 900px) {
+      .masthead { padding: 52px 32px 72px; min-height: 300px; }
+      .geo-circle-lg { width: 220px; height: 220px; right: -50px; top: -50px; }
+      .geo-circle-outline { width: 80px; height: 80px; right: 120px; }
+      .geo-square { width: 140px; height: 140px; }
+      .geo-dot { display: none; }
+      .section-header-bar { padding: 22px 32px 26px; }
+      .section-num { font-size: 80px; right: 28px; }
+      .section-content { padding: 28px 32px 52px; }
+      .featured-card { padding: 28px; }
+      .featured-inner { grid-template-columns: 1fr; gap: 28px; }
+      .featured-left { border-right: none; padding-right: 0; border-bottom: 1px solid #2A2A2A; padding-bottom: 24px; }
+      .card-grid--duo { grid-template-columns: 1fr; }
+      .card-grid--duo .card:first-child { min-height: auto; }
+      .card-grid--trio { grid-template-columns: 1fr; }
+      .card-grid--quad { grid-template-columns: 1fr; }
+      .site-footer { padding: 40px 32px; }
+    }
+    @media (max-width: 500px) {
+      .masthead { padding: 40px 20px 60px; }
+      .section-content { padding: 20px 20px 40px; }
+      .section-header-bar { padding: 18px 20px 20px; }
+    }
+
+  </style>
 </head>
 <body>
-<div class="container">
-  <div class="header">
-    <h1>Art Inspiration</h1>
-    <div class="rule"></div>
-    <div class="tagline">Daily creative fuel</div>
-    <div class="meta">2026-04-03</div>
-  </div>
 
-  
-  <div class="section">
-    <div class="section-label">hyperallergic</div>
-    
-    <div class="exhibit">
-      <div class="exhibit-title"><a href="https://hyperallergic.com/salvador-dalis-frustrating-vision-of-the-divine/">Salvador Dalí’s Frustrating Vision of the Divine</a></div>
-      <div class="exhibit-provenance">
-        <span class="source">Hyperallergic</span>
-        &middot; 2026-04-03
-      </div>
-      
-    </div>
-    
-    <div class="exhibit">
-      <div class="exhibit-title"><a href="https://hyperallergic.com/leah-ki-yi-zhengs-personal-i-ching/">Leah Ki Yi Zheng’s Personal I Ching</a></div>
-      <div class="exhibit-provenance">
-        <span class="source">Hyperallergic</span>
-        &middot; 2026-04-03
-      </div>
-      
-    </div>
-    
-    <div class="exhibit">
-      <div class="exhibit-title"><a href="https://hyperallergic.com/lebanese-artist-accuses-israel-of-war-crime-for-strike-that-killed-his-parents/">Lebanese Artist Accuses Israel of War Crime for Strike That Killed His Parents</a></div>
-      <div class="exhibit-provenance">
-        <span class="source">Hyperallergic</span>
-        &middot; 2026-04-03
-      </div>
-      
-    </div>
-    
-    <div class="exhibit">
-      <div class="exhibit-title"><a href="https://hyperallergic.com/poc-arts-nonprofits-face-severe-staffing-challenges-survey-finds/">POC Arts Nonprofits Face Severe Staffing Challenges, Survey Finds</a></div>
-      <div class="exhibit-provenance">
-        <span class="source">Hyperallergic</span>
-        &middot; 2026-04-03
-      </div>
-      
-    </div>
-    
+<!-- MASTHEAD -->
+<header class="masthead">
+  <div class="geo-circle-lg"></div>
+  <div class="geo-circle-outline"></div>
+  <div class="geo-square"></div>
+  <div class="geo-dot"></div>
+  <div class="masthead-content">
+    <div class="masthead-vol">Daily Digest &mdash; Vol. 20260402</div>
+    <div class="masthead-title">Art<br>Inspira&shy;tion</div>
+    <div class="masthead-digest">Paint &bull; Mind &bull; Tech &bull; Interface &bull; Lens</div>
+    <div class="masthead-date">April 2, 2026</div>
   </div>
-  
-  <div class="section">
-    <div class="section-label">colossal</div>
-    
-    <div class="exhibit">
-      <div class="exhibit-title"><a href="https://www.thisiscolossal.com/2026/04/misato-sano-wooden-dog-sculptures/">Misato Sano’s Charming Wooden Dogs Are Carved With Personality</a></div>
-      <div class="exhibit-provenance">
-        <span class="source">Colossal</span>
-        &middot; 2026-04-03
-      </div>
-      
-    </div>
-    
-    <div class="exhibit">
-      <div class="exhibit-title"><a href="https://www.thisiscolossal.com/2026/04/liza-lou-faq-beaded-paintings/">Brushstrokes Transform into Beaded Topographies in Liza Lou’s Mixed-Media Paintings</a></div>
-      <div class="exhibit-provenance">
-        <span class="source">Colossal</span>
-        &middot; 2026-04-03
-      </div>
-      
-    </div>
-    
-    <div class="exhibit">
-      <div class="exhibit-title"><a href="https://www.thisiscolossal.com/2026/04/art-uk-digital-database-street-art-murals/">Explore Art UK’s Digital Database of More Than 6,600 Street Art Murals</a></div>
-      <div class="exhibit-provenance">
-        <span class="source">Colossal</span>
-        &middot; 2026-04-03
-      </div>
-      
-    </div>
-    
-    <div class="exhibit">
-      <div class="exhibit-title"><a href="https://www.thisiscolossal.com/2026/04/astek-wallpapers-eterna-nouveau-murals-interior-design/">A Line of Mural Wallpapers from Astek Celebrates ‘Eterna Nouveau’</a></div>
-      <div class="exhibit-provenance">
-        <span class="source">Colossal</span>
-        &middot; 2026-04-03
-      </div>
-      
-    </div>
-    
-  </div>
-  
-  <div class="section">
-    <div class="section-label">creativeboom</div>
-    
-  </div>
-  
-  <div class="section">
-    <div class="section-label">uxdesign</div>
-    
-    <div class="exhibit">
-      <div class="exhibit-title"><a href="https://uxdesign.cc/context-matters-a-lot-7799188344dc?source=rss----138adf9c44c---4">Context matters… A lot</a></div>
-      <div class="exhibit-provenance">
-        <span class="source">UX Collective</span>
-        &middot; 2026-04-03
-      </div>
-      
-    </div>
-    
-    <div class="exhibit">
-      <div class="exhibit-title"><a href="https://uxdesign.cc/running-your-life-from-terminal-is-peak-2026-and-thats-not-the-flex-you-think-it-is-281f1f616a07?source=rss----138adf9c44c---4">Running your life from terminal is peak 2026 — and that’s not the flex you think it is</a></div>
-      <div class="exhibit-provenance">
-        <span class="source">UX Collective</span>
-        &middot; 2026-04-03
-      </div>
-      
-    </div>
-    
-    <div class="exhibit">
-      <div class="exhibit-title"><a href="https://uxdesign.cc/interview-with-amy-huang-leadership-in-design-194f73ac7b2f?source=rss----138adf9c44c---4">Interview with Amy Huang, Leadership in Design</a></div>
-      <div class="exhibit-provenance">
-        <span class="source">UX Collective</span>
-        &middot; 2026-04-03
-      </div>
-      
-    </div>
-    
-    <div class="exhibit">
-      <div class="exhibit-title"><a href="https://uxdesign.cc/is-ai-addiction-a-thing-8c9baaafa679?source=rss----138adf9c44c---4">Is AI addiction a thing?</a></div>
-      <div class="exhibit-provenance">
-        <span class="source">UX Collective</span>
-        &middot; 2026-04-03
-      </div>
-      
-    </div>
-    
-  </div>
-  
-  <div class="section">
-    <div class="section-label">abduzeedo</div>
-    
-    <div class="exhibit">
-      <div class="exhibit-title"><a href="https://abduzeedo.com/google-sans-flex-free-font-six-variable-axes-one-file">Google Sans Flex Free Font: Six Variable Axes, One File</a></div>
-      <div class="exhibit-provenance">
-        <span class="source">Abduzeedo</span>
-        &middot; 2026-04-03
-      </div>
-      
-    </div>
-    
-    <div class="exhibit">
-      <div class="exhibit-title"><a href="https://abduzeedo.com/node/89241">KATSEYE Brand Identity: HuskyFox Builds a Custom Slab-Serif</a></div>
-      <div class="exhibit-provenance">
-        <span class="source">Abduzeedo</span>
-        &middot; 2026-04-03
-      </div>
-      
-    </div>
-    
-    <div class="exhibit">
-      <div class="exhibit-title"><a href="https://abduzeedo.com/sous-forme-brand-identity-zurich">Sous Forme Brand Identity for a Zürich Architecture Studio</a></div>
-      <div class="exhibit-provenance">
-        <span class="source">Abduzeedo</span>
-        &middot; 2026-04-03
-      </div>
-      
-    </div>
-    
-  </div>
-  
-  <div class="section">
-    <div class="section-label">nofilmschool</div>
-    
-    <div class="exhibit">
-      <div class="exhibit-title"><a href="https://nofilmschool.com/how-a-30k-animated-indie-scored-a-theatrical-run-then-landed-on-hbo">How a $30K Animated Indie Scored a Theatrical Run — Then Landed on HBO</a></div>
-      <div class="exhibit-provenance">
-        <span class="source">No Film School</span>
-        &middot; 2026-04-03
-      </div>
-      
-    </div>
-    
-    <div class="exhibit">
-      <div class="exhibit-title"><a href="https://nofilmschool.com/why-movies-are-getting-longer">Why Movies Are Getting Longer (And What It Means for the Future of Cinema)</a></div>
-      <div class="exhibit-provenance">
-        <span class="source">No Film School</span>
-        &middot; 2026-04-03
-      </div>
-      
-    </div>
-    
-    <div class="exhibit">
-      <div class="exhibit-title"><a href="https://nofilmschool.com/film-genres">The Conclusive TV &amp; Movie Genres List</a></div>
-      <div class="exhibit-provenance">
-        <span class="source">No Film School</span>
-        &middot; 2026-04-03
-      </div>
-      
-    </div>
-    
-  </div>
-  
-  <div class="section">
-    <div class="section-label">indiewire_craft</div>
-    
-    <div class="exhibit">
-      <div class="exhibit-title"><a href="https://www.indiewire.com/features/commentary/anime-spring-2026-shows-watch-1235187391/">5 Anime Series to Check Out This Spring</a></div>
-      <div class="exhibit-provenance">
-        <span class="source">IndieWire</span>
-        &middot; 2026-04-03
-      </div>
-      
-    </div>
-    
-    <div class="exhibit">
-      <div class="exhibit-title"><a href="https://www.indiewire.com/news/breaking-news/a24-the-drama-anti-gun-marketing-twist-1235187368/">Why A24’s ‘The Drama’ Sparked Criticism from Anti-Gun Violence Organization Over ‘Misaligned’ Marketing</a></div>
-      <div class="exhibit-provenance">
-        <span class="source">IndieWire</span>
-        &middot; 2026-04-03
-      </div>
-      
-    </div>
-    
-    <div class="exhibit">
-      <div class="exhibit-title"><a href="https://www.indiewire.com/criticism/movies/the-blue-trail-movie-review-1235187370/">‘The Blue Trail’ Review: A 77-Year-Old Woman Finds Freedom in the Amazon in Brazil’s Brilliant Dystopian Road Movie</a></div>
-      <div class="exhibit-provenance">
-        <span class="source">IndieWire</span>
-        &middot; 2026-04-03
-      </div>
-      
-    </div>
-    
-  </div>
-  
-  <div class="section">
-    <div class="section-label">painting_studio</div>
-    
-  </div>
-  
-  <div class="section">
-    <div class="section-label">creative_mind</div>
-    
-  </div>
-  
-  <div class="section">
-    <div class="section-label">tech_art</div>
-    
-  </div>
-  
-  <div class="section">
-    <div class="section-label">ux_interface</div>
-    
-  </div>
-  
-  <div class="section">
-    <div class="section-label">lens_craft</div>
-    
-  </div>
-  
+</header>
 
-  <div class="footer">
-    <div class="rule"></div>
-    <p>Art Inspiration &mdash; 2026-04-03</p>
-  </div>
+<div class="color-divider">
+  <span style="height:60px;background:var(--c1);"></span>
+  <span style="height:44px;background:var(--c4);"></span>
+  <span style="height:52px;background:var(--c2);"></span>
+  <span style="height:36px;background:var(--c3);"></span>
+  <span style="height:48px;background:#ff6b35;"></span>
 </div>
+
+<!-- SECTION A: PAINT & CANVAS -->
+<section class="art-section art-section--tinted" style="--sc: var(--c1);">
+  <div class="section-header-bar">
+    <div class="section-name">Paint &amp; Canvas</div>
+    <div class="section-num">A</div>
+  </div>
+  <div class="section-content">
+    <a class="featured-card" href="https://hyperallergic.com/kamrooz-aram-breaks-down-the-grid/" target="_blank" rel="noopener">
+      <span class="card-category">Featured</span>
+      <div class="featured-inner">
+        <div class="featured-left">
+          <span class="card-headline">Kamrooz Aram Breaks Down the Grid</span>
+          <p class="card-body">Kamrooz Aram dismantles the modernist grid to expose the colonial hierarchies embedded in Western abstraction. His paintings and installations pull from Islamic decorative traditions to challenge which visual languages get labeled &ldquo;art&rdquo; versus &ldquo;craft.&rdquo;</p>
+          <span class="card-source">Hyperallergic</span>
+        </div>
+        <div>
+          <p class="card-body-right">When an artist takes apart the grid, they take apart the power structures it was built to protect. Aram makes that dismantling visible.</p>
+        </div>
+      </div>
+    </a>
+    <div style="margin-top:16px;"></div>
+    <div class="card-grid card-grid--trio">
+      <a class="card" href="https://www.thisiscolossal.com/2026/04/joseph-ford-impossible-street-art-photography-infrastructure/" target="_blank" rel="noopener">
+        <span class="card-category">Street Art</span>
+        <span class="card-headline">Street Artists Take On Monumental Infrastructure in &lsquo;Impossible&rsquo; Photos</span>
+        <p class="card-body">Joseph Ford captures street artists transforming massive infrastructure into canvases for seemingly impossible interventions. The photographs blur the line between documentation and illusion, turning bridges and towers into collaborators.</p>
+        <span class="card-source">Colossal</span>
+      </a>
+      <a class="card" href="https://hyperallergic.com/could-colorado-create-the-countrys-first-artist-corporation/" target="_blank" rel="noopener">
+        <span class="card-category">Art Policy</span>
+        <span class="card-headline">Could Colorado Create the Country&rsquo;s First Artist Corporation?</span>
+        <p class="card-body">Colorado is exploring a new legal entity designed specifically for working artists, combining liability protections with cooperative ownership structures. If passed, it would be the first state-level corporate framework tailored to creative professionals in the U.S.</p>
+        <span class="card-source">Hyperallergic</span>
+      </a>
+      <a class="card" href="https://hyperallergic.com/the-best-april-fools-jokes-in-the-art-world-this-year/" target="_blank" rel="noopener">
+        <span class="card-category">Culture</span>
+        <span class="card-headline">The Best April Fools&rsquo; Jokes in the Art World This Year</span>
+        <p class="card-body">Museums and galleries pulled off their annual tradition of absurd announcements, from fake acquisitions to impossible exhibitions. Hyperallergic rounds up the pranks that landed and the ones that were too plausible to be funny.</p>
+        <span class="card-source">Hyperallergic</span>
+      </a>
+    </div>
+    <div style="margin-top:16px;"></div>
+    <div class="card-grid card-grid--quad">
+      <a class="card" href="https://hyperallergic.com/10-art-books-for-your-spring-reading-list/" target="_blank" rel="noopener">
+        <span class="card-category">Books</span>
+        <span class="card-headline">10 Art Books for Your Spring Reading List</span>
+        <p class="card-body">A curated selection of new art books spanning photography, painting, and cultural criticism worth picking up this season. The list ranges from monographs on overlooked artists to sharp critical writing about the state of contemporary visual culture.</p>
+        <span class="card-source">Hyperallergic</span>
+      </a>
+      <a class="card" href="https://www.thisiscolossal.com/2026/04/jake-henzler-boy-knits-world-knit-the-city-book/" target="_blank" rel="noopener">
+        <span class="card-category">Textile Art</span>
+        <span class="card-headline">Stitch Your Favorite Destinations with Jake Henzler&rsquo;s &lsquo;Knit the City&rsquo;</span>
+        <p class="card-body">Jake Henzler translates iconic cityscapes into intricate knitting patterns, turning yarn into architectural portraits. His new book offers patterns that let crafters recreate landmarks stitch by stitch, blending textile art with urban geography.</p>
+        <span class="card-source">Colossal</span>
+      </a>
+      <a class="card" href="https://www.tokyoartbeat.com/en/articles/-/best-exhibitions-starting-in-april-2026-en-202604" target="_blank" rel="noopener">
+        <span class="card-category">Exhibition</span>
+        <span class="card-headline">Georges Rouault: Memories of the Artist&rsquo;s Studio Exhibition</span>
+        <p class="card-body">The Panasonic Shiodome Museum of Art opens a deep dive into Georges Rouault&rsquo;s creative environment and working methods this April. The exhibition reconstructs the studio as a space of spiritual intensity, revealing how environment shaped one of the 20th century&rsquo;s most distinctive painters.</p>
+        <span class="card-source">Tokyo Art Beat</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION B: THE CREATIVE MIND -->
+<section class="art-section art-section--tinted" style="--sc: var(--c4);">
+  <div class="section-header-bar">
+    <div class="section-name section-name--light">The Creative Mind</div>
+    <div class="section-num section-num--light">B</div>
+  </div>
+  <div class="section-content">
+    <a class="featured-card" href="https://eccunion.com/features/2026/04/01/ai-cannot-displace-human-art/" target="_blank" rel="noopener">
+      <span class="card-category">Featured</span>
+      <div class="featured-inner">
+        <div class="featured-left">
+          <span class="card-headline">Artists Debate AI&rsquo;s Role in Creativity: Human Experience vs. Machine Generation</span>
+          <p class="card-body">Artists at El Camino College confront whether AI art can truly displace human creativity, arguing that genuine art stems from personal experience, imagination, and emotion. While some see AI as a useful planning tool, others insist that machine-generated work lacks the soul inherent in human-made art.</p>
+          <span class="card-source">El Camino College The Union</span>
+        </div>
+        <div>
+          <p class="card-body-right">The debate is no longer theoretical. Working artists are drawing their lines in real time, and the arguments are more nuanced than the headlines suggest.</p>
+        </div>
+      </div>
+    </a>
+    <div style="margin-top:16px;"></div>
+    <div class="card-grid card-grid--duo">
+      <a class="card" href="https://www.e-flux.com/announcements/6785828/annual-symposium-2026" target="_blank" rel="noopener">
+        <span class="card-category">Symposium</span>
+        <span class="card-headline">Rethinking Art as a Generative Force</span>
+        <p class="card-body">The Centre for Art and the Political Imaginary&rsquo;s 2026 symposium explores art not as representation but as a generative force that treats place, organization, and institutions as raw material. The approach aims to foster new spatial, ecological, and institutional conditions beyond traditional artistic boundaries.</p>
+        <span class="card-source">e-flux</span>
+      </a>
+      <a class="card" href="https://www.e-flux.com/announcements/6787004/jani-christouenantiodromianiki-kanaginian-ode-to-thingsstathis-logothetisearth-to-earth" target="_blank" rel="noopener">
+        <span class="card-category">Exhibition</span>
+        <span class="card-headline">Stathis Logothetis: Animating Painting Through Decay and Chance</span>
+        <p class="card-body">An exhibition highlights Logothetis&rsquo;s performative approach where painting becomes an event rather than a static object. His later works embraced processes of decay, chance, and transformation, allowing natural forces to become co-authors of the work.</p>
+        <span class="card-source">e-flux</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION C: TECH x ART -->
+<section class="art-section art-section--tinted" style="--sc: var(--c2);">
+  <div class="section-header-bar">
+    <div class="section-name">Tech &times; Art</div>
+    <div class="section-num">C</div>
+  </div>
+  <div class="section-content">
+    <a class="featured-card" href="https://artomity.art/2026/04/01/hong-kong-arts-development-council-showcase-presents-the-lurking-void/" target="_blank" rel="noopener">
+      <span class="card-category">Featured</span>
+      <div class="featured-inner">
+        <div class="featured-left">
+          <span class="card-headline">&ldquo;The Lurking Void&rdquo; Examines Human-AI Entanglement in Office Labor</span>
+          <p class="card-body">Phoebe Hui&rsquo;s exhibition for the Hong Kong Arts Development Council features kinetic sculptures and generative art exploring how AI reconfigures work, identity, and value. The installations transform mundane office equipment into creature-like entities that blur the line between human and machine labor.</p>
+          <span class="card-source">Artomity</span>
+        </div>
+        <div>
+          <p class="card-body-right">Office chairs that breathe, printers that think. Hui turns the tools of corporate life into uncanny organisms questioning who is really doing the work.</p>
+        </div>
+      </div>
+    </a>
+    <div style="margin-top:16px;"></div>
+    <div class="card-grid card-grid--duo">
+      <a class="card" href="https://www.morningstar.com/news/accesswire/1153344msn/layer-brings-digital-art-to-zero-bond-at-wynn-las-vegas" target="_blank" rel="noopener">
+        <span class="card-category">Generative Art</span>
+        <span class="card-headline">Layer Brings Generative Digital Art to Wynn Las Vegas&rsquo;s Zero Bond</span>
+        <p class="card-body">Art-tech company Layer is showcasing generative works by Zach Lieberman and Casey Reas at Zero Bond in Wynn Las Vegas. Their engine dynamically curates evolving pieces based on time and environmental conditions, creating a living visual experience inside a members-only club.</p>
+        <span class="card-source">Morningstar</span>
+      </a>
+      <a class="card" href="https://www.muslimnetwork.tv/diriyah-art-in-saudi-arabia-plans-to-launch-april-workshop-series/" target="_blank" rel="noopener">
+        <span class="card-category">Workshop</span>
+        <span class="card-headline">Diriyah Art Futures Explores AI in Mixed Media and Ecological Creativity</span>
+        <p class="card-body">Diriyah Art Futures launches an April workshop series combining AI-generated digital imagery with traditional techniques and botanical materials. The program engages artists in the interplay of sound, technology, and nature through hands-on making.</p>
+        <span class="card-source">Muslim Network TV</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION D: INTERFACE & UX -->
+<section class="art-section art-section--tinted" style="--sc: var(--c3);">
+  <div class="section-header-bar">
+    <div class="section-name">Interface &amp; UX</div>
+    <div class="section-num">D</div>
+  </div>
+  <div class="section-content">
+    <a class="featured-card" href="https://uxdesign.cc/every-designer-on-my-team-ships-the-same-quality-now-e6fbc0c4feec?source=rss----138adf9c44c---4" target="_blank" rel="noopener">
+      <span class="card-category">Featured</span>
+      <div class="featured-inner">
+        <div class="featured-left">
+          <span class="card-headline">Every Designer on My Team Ships the Same Quality Now</span>
+          <p class="card-body">A design lead shares the systems and rituals that eliminated quality variance across their team, from shared critique frameworks to automated design-lint checks. The piece moves past platitudes about &ldquo;design culture&rdquo; into specific, repeatable methods that actually close the gap between senior and junior output.</p>
+          <span class="card-source">UX Collective</span>
+        </div>
+        <div>
+          <p class="card-body-right">Not a manifesto. A playbook. The kind of operational detail that most design teams talk about wanting but rarely document.</p>
+        </div>
+      </div>
+    </a>
+    <div style="margin-top:16px;"></div>
+    <div class="card-grid card-grid--trio">
+      <a class="card" href="https://uxdesign.cc/ai-is-rewriting-the-rules-language-is-following-b811a1a91ced?source=rss----138adf9c44c---4" target="_blank" rel="noopener">
+        <span class="card-category">AI &amp; Language</span>
+        <span class="card-headline">AI Is Rewriting the Rules. Language Is Following.</span>
+        <p class="card-body">An examination of how AI tools are reshaping the vocabulary designers use, from &ldquo;prompting&rdquo; replacing &ldquo;briefing&rdquo; to &ldquo;generating&rdquo; supplanting &ldquo;creating.&rdquo; The linguistic shift reveals deeper changes in how design work is conceived and valued.</p>
+        <span class="card-source">UX Collective</span>
+      </a>
+      <a class="card" href="https://uxdesign.cc/human-centred-design-has-grown-up-it-is-time-we-did-too-766601c1fc7d?source=rss----138adf9c44c---4" target="_blank" rel="noopener">
+        <span class="card-category">Design Theory</span>
+        <span class="card-headline">Human-Centred Design Has Grown Up. It&rsquo;s Time We Did Too.</span>
+        <p class="card-body">A call to evolve human-centred design beyond its original user-empathy framework into something that accounts for systemic complexity and ecological impact. The argument: HCD worked for apps, but the problems ahead demand a wider lens.</p>
+        <span class="card-source">UX Collective</span>
+      </a>
+      <a class="card" href="https://abduzeedo.com/node/89235" target="_blank" rel="noopener">
+        <span class="card-category">Graphic Design</span>
+        <span class="card-headline">Isometric Graphic Design: Adhemas Batista&rsquo;s Modular Boxes</span>
+        <p class="card-body">Adhemas Batista builds complex visual worlds from simple isometric modules, stacking and rotating geometric boxes into vibrant compositions. The work demonstrates how constraint-driven systems can generate infinite visual variety from minimal building blocks.</p>
+        <span class="card-source">Abduzeedo</span>
+      </a>
+    </div>
+    <div style="margin-top:16px;"></div>
+    <div class="card-grid card-grid--duo">
+      <a class="card" href="https://abduzeedo.com/node/89233" target="_blank" rel="noopener">
+        <span class="card-category">Brand Identity</span>
+        <span class="card-headline">Firefox Brand Identity Gets Its First Mascot, Kit</span>
+        <p class="card-body">Firefox introduces Kit, its first official brand mascot, marking a shift toward a more personality-driven identity after years of abstract logo evolution. The character aims to make the browser feel approachable without losing its open-source credibility.</p>
+        <span class="card-source">Abduzeedo</span>
+      </a>
+      <a class="card" href="https://abduzeedo.com/node/89204" target="_blank" rel="noopener">
+        <span class="card-category">Brand Identity</span>
+        <span class="card-headline">STARK Architecture Brand Identity by Electric Brand Consultants</span>
+        <p class="card-body">Electric Brand Consultants crafts a visual system for STARK Architecture that mirrors the firm&rsquo;s structural precision through typographic rigor and a restrained material palette. The identity treats negative space as a design element, letting the architecture speak through the gaps.</p>
+        <span class="card-source">Abduzeedo</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION E: LENS CRAFT -->
+<section class="art-section art-section--tinted" style="--sc: #ff6b35;">
+  <div class="section-header-bar">
+    <div class="section-name section-name--light">Lens Craft</div>
+    <div class="section-num section-num--light">E</div>
+  </div>
+  <div class="section-content">
+    <a class="featured-card" href="https://nofilmschool.com/how-did-they-film-the-moon-landing" target="_blank" rel="noopener">
+      <span class="card-category">Featured</span>
+      <div class="featured-inner">
+        <div class="featured-left">
+          <span class="card-headline">How The Moon Landing Was Shot</span>
+          <p class="card-body">A technical breakdown of the cameras, lenses, and engineering decisions behind the most-watched broadcast in human history. From custom Westinghouse cameras to the challenges of filming in vacuum and one-sixth gravity, this is the cinematography story NASA never fully told.</p>
+          <span class="card-source">No Film School</span>
+        </div>
+        <div>
+          <p class="card-body-right">Every frame from the moon was a filmmaking problem no one had solved before. The technical constraints produced some of the most iconic images ever captured.</p>
+        </div>
+      </div>
+    </a>
+    <div style="margin-top:16px;"></div>
+    <div class="card-grid card-grid--trio">
+      <a class="card" href="https://nofilmschool.com/meaning-behind-charlie-dont-surf-apocalypse-now" target="_blank" rel="noopener">
+        <span class="card-category">Film Analysis</span>
+        <span class="card-headline">&ldquo;Charlie Don&rsquo;t Surf!&rdquo;: The Absurdity of War in &lsquo;Apocalypse Now&rsquo;</span>
+        <p class="card-body">A deep read of the iconic beach assault sequence and how Coppola used the absurdity of surfing under fire to crystallize the Vietnam War&rsquo;s moral incoherence. The scene&rsquo;s craft choices in sound, editing, and staging remain a masterclass in controlled chaos.</p>
+        <span class="card-source">No Film School</span>
+      </a>
+      <a class="card" href="https://www.indiewire.com/news/breaking-news/wagner-moura-flesh-of-the-gods-kristen-stewart-a24-1235187037/" target="_blank" rel="noopener">
+        <span class="card-category">Casting</span>
+        <span class="card-headline">Wagner Moura Joins &lsquo;Flesh of the Gods&rsquo; with Kristen Stewart at A24</span>
+        <p class="card-body">Wagner Moura replaces Oscar Isaac in Panos Cosmatos&rsquo;s follow-up to &lsquo;Mandy,&rsquo; joining Kristen Stewart in a film that promises the director&rsquo;s signature blend of psychedelic horror and visual maximalism. A24 continues assembling unexpected casts for auteur-driven genre work.</p>
+        <span class="card-source">IndieWire</span>
+      </a>
+      <a class="card" href="https://www.cnet.com/science/space/nat-geo-confidential-behind-scenes-footage-inside-artemis-ii-orion/" target="_blank" rel="noopener">
+        <span class="card-category">Behind the Lens</span>
+        <span class="card-headline">Nat Geo Documents Artemis II: Astronauts Learn Filmmaking in Space</span>
+        <p class="card-body">National Geographic trained Artemis II astronauts in professional camera and audio techniques to capture the mission from inside Orion. The collaboration gives filmmaking craft an entirely new frontier, producing footage no documentary crew could have shot.</p>
+        <span class="card-source">CNET</span>
+      </a>
+    </div>
+    <div style="margin-top:16px;"></div>
+    <div class="card-grid card-grid--quad">
+      <a class="card" href="https://nofilmschool.com/biggest-box-office-bombs-of-the-2000s" target="_blank" rel="noopener">
+        <span class="card-category">Box Office</span>
+        <span class="card-headline">10 Massive Box-Office Bombs of the 2000s: Iconic Flops Ranked</span>
+        <p class="card-body">No Film School ranks the decade&rsquo;s most spectacular financial disasters and examines what went wrong behind the scenes. The list traces how ambition, studio politics, and timing can turn expensive productions into cautionary tales.</p>
+        <span class="card-source">No Film School</span>
+      </a>
+      <a class="card" href="https://www.indiewire.com/features/commentary/film-financing-supply-side-demand-side-thinking-1235186844/" target="_blank" rel="noopener">
+        <span class="card-category">Film Business</span>
+        <span class="card-headline">Filmmakers Need to Learn Demand-Side Thinking to Access Stranded Capital</span>
+        <p class="card-body">IndieWire argues that billions in film financing sit untapped because filmmakers pitch from the supply side rather than addressing what investors actually want. The piece lays out a framework for matching creative ambition to real capital flows.</p>
+        <span class="card-source">IndieWire</span>
+      </a>
+      <a class="card" href="https://www.indiewire.com/news/festivals/san-francisco-film-festival-reveals-2026-lineup-1235186900/" target="_blank" rel="noopener">
+        <span class="card-category">Festival</span>
+        <span class="card-headline">&lsquo;The Invite,&rsquo; &lsquo;Late Fame&rsquo; Lead SFFILM Festival 2026 Lineup</span>
+        <p class="card-body">San Francisco&rsquo;s SFFILM Festival reveals its 2026 slate, anchored by &lsquo;The Invite&rsquo; and &lsquo;Late Fame&rsquo; alongside a diverse selection of international features and documentaries. The lineup signals a festival betting on independent voices and first-time directors.</p>
+        <span class="card-source">IndieWire</span>
+      </a>
+      <a class="card" href="https://filmlondon.org.uk/latest/film-london-connect-case-study-sofia-soto-and-felix-schmilinsky" target="_blank" rel="noopener">
+        <span class="card-category">Cinematography</span>
+        <span class="card-headline">Sofia Soto on Visual Storytelling and Collaborative Filmmaking</span>
+        <p class="card-body">Cinematography mentee Sofia Soto discusses her passion for visual storytelling through composition, lighting, and camera movement in a Film London Connect case study. She emphasizes how every shoot presents unique challenges that demand adaptability and close collaboration with directors.</p>
+        <span class="card-source">Film London</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <p>Art Inspiration &mdash; <span class="footer-accent">April 2, 2026</span></p>
+  <p>Curated daily &mdash; Paint &bull; Mind &bull; Tech &bull; Interface &bull; Lens</p>
+</footer>
+
 </body>
 </html>
