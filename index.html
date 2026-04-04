@@ -1,454 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Art Inspiration - 2026-04-04</title>
-<style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-  :root {
-    --bg: #0f0f0f;
-    --bg-card: #1a1a1a;
-    --text: #e8e8e8;
-    --text-muted: #888;
-    --accent: #4ade80;
-    --accent-dim: rgba(74, 222, 128, 0.12);
-    --border: #2a2a2a;
-    --radius: 6px;
-  }
-
-  @media (prefers-color-scheme: light) {
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Art Inspiration &mdash; 2026-04-04</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+  <style>
     :root {
-      --bg: #fafafa;
-      --bg-card: #ffffff;
-      --text: #1a1a1a;
-      --text-muted: #666;
-      --accent: #16a34a;
-      --accent-dim: rgba(22, 163, 74, 0.08);
-      --border: #e0e0e0;
+      --bg: #0F0F0F;
+      --c1: #FF3366;
+      --c2: #00E5FF;
+      --c3: #FFD600;
+      --c4: #7B2FFF;
+      --c5: #FF6B00;
+      --c6: #00FF9F;
+      --text: #FFFFFF;
+      --text-dark: #0F0F0F;
+      --surface: #1A1A1A;
     }
-  }
-
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    font-size: 15px;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-  }
-
-  .container {
-    max-width: 680px;
-    margin: 0 auto;
-    padding: 32px 20px;
-  }
-
-  /* ── Header ── */
-  .header {
-    margin-bottom: 40px;
-    padding-bottom: 24px;
-    border-bottom: 1px solid var(--border);
-  }
-
-  .header h1 {
-    font-size: 28px;
-    font-weight: 700;
-    letter-spacing: -0.5px;
-    color: var(--text);
-    margin-bottom: 4px;
-  }
-
-  .header .tagline {
-    font-size: 14px;
-    color: var(--text-muted);
-    margin-bottom: 8px;
-  }
-
-  .header .date {
-    font-family: "SF Mono", "Fira Code", "Cascadia Code", monospace;
-    font-size: 12px;
-    color: var(--accent);
-    letter-spacing: 0.5px;
-  }
-
-  /* ── Sections ── */
-  .section {
-    margin-bottom: 36px;
-  }
-
-  .section-title {
-    font-size: 13px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
-    color: var(--accent);
-    margin-bottom: 16px;
-    padding-bottom: 8px;
-    border-bottom: 1px solid var(--border);
-  }
-
-  /* ── Story cards ── */
-  .story {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    padding: 14px 16px;
-    margin-bottom: 10px;
-    transition: border-color 0.15s ease;
-  }
-
-  .story:hover {
-    border-color: var(--accent);
-  }
-
-  .story-title a {
-    color: var(--text);
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 15px;
-    line-height: 1.4;
-  }
-
-  .story-title a:hover {
-    color: var(--accent);
-  }
-
-  .story-summary {
-    color: var(--text-muted);
-    font-size: 13px;
-    margin-top: 6px;
-    line-height: 1.5;
-  }
-
-  .story-meta {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-top: 8px;
-    font-family: "SF Mono", "Fira Code", "Cascadia Code", monospace;
-    font-size: 11px;
-    color: var(--text-muted);
-  }
-
-  .source-badge {
-    background: var(--accent-dim);
-    color: var(--accent);
-    padding: 2px 8px;
-    border-radius: 3px;
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 0.3px;
-  }
-
-  /* ── Footer ── */
-  .footer {
-    margin-top: 48px;
-    padding-top: 20px;
-    border-top: 1px solid var(--border);
-    text-align: center;
-    font-family: "SF Mono", "Fira Code", "Cascadia Code", monospace;
-    font-size: 11px;
-    color: var(--text-muted);
-  }
-
-  /* ── Empty state ── */
-  .empty {
-    color: var(--text-muted);
-    font-style: italic;
-    font-size: 13px;
-    padding: 12px 0;
-  }
-
-  /* ── Responsive ── */
-  @media (max-width: 680px) {
-    .container { padding: 20px 16px; }
-    .header h1 { font-size: 24px; }
-    .story { padding: 12px 14px; }
-  }
-</style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Space Mono', monospace;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    .masthead {
+      background: var(--c1);
+      position: relative;
+      overflow: hidden;
+      padding: 72px 60px 88px;
+      min-height: 380px;
+      display: flex;
+      align-items: flex-start;
+    }
+    .geo-circle-lg {
+      position: absolute; width: 360px; height: 360px; border-radius: 50%;
+      background: var(--c2); opacity: 0.2; top: -90px; right: -70px; pointer-events: none;
+    }
+    .geo-circle-outline {
+      position: absolute; width: 130px; height: 130px; border-radius: 50%;
+      border: 4px solid var(--c3); opacity: 0.45; top: 48px; right: 220px; pointer-events: none;
+    }
+    .geo-square {
+      position: absolute; width: 220px; height: 220px; background: var(--c3); opacity: 0.28;
+      bottom: -90px; left: 44px; transform: rotate(38deg); pointer-events: none;
+    }
+    .geo-dot {
+      position: absolute; width: 60px; height: 60px; border-radius: 50%; background: var(--c4);
+      opacity: 0.35; bottom: 40px; right: 120px; pointer-events: none;
+    }
+    .masthead-content { position: relative; z-index: 2; width: 100%; display: flex; flex-direction: column; }
+    .masthead-vol { font-family: 'Space Mono', monospace; font-size: 11px; color: rgba(255,255,255,0.6); letter-spacing: 0.22em; text-transform: uppercase; margin-bottom: 28px; }
+    .masthead-title { font-family: 'Unbounded', sans-serif; font-weight: 900; font-size: clamp(60px, 10.5vw, 120px); line-height: 0.88; letter-spacing: -0.04em; color: #FFFFFF; text-transform: uppercase; }
+    .masthead-digest { font-family: 'Space Mono', monospace; font-size: 13px; color: rgba(255,255,255,0.78); letter-spacing: 0.3em; text-transform: uppercase; margin-top: 30px; }
+    .masthead-date { font-family: 'Space Mono', monospace; font-size: 11px; color: rgba(255,255,255,0.55); letter-spacing: 0.15em; text-transform: uppercase; margin-top: 52px; text-align: right; align-self: flex-end; }
+    .color-divider { display: flex; width: 100%; height: 60px; align-items: flex-end; overflow: hidden; }
+    .color-divider span { flex: 1; display: block; }
+    .art-section { position: relative; }
+    .art-section--tinted { position: relative; }
+    .art-section--tinted::before { content: ''; position: absolute; inset: 0; background: var(--sc); opacity: 0.055; pointer-events: none; z-index: 0; }
+    .section-header-bar { position: relative; background: var(--sc); padding: 26px 60px 30px; overflow: hidden; display: flex; align-items: center; }
+    .section-num { font-family: 'Unbounded', sans-serif; font-weight: 900; font-size: clamp(90px, 16vw, 190px); color: rgba(0,0,0,0.11); line-height: 1; position: absolute; right: 44px; top: 50%; transform: translateY(-50%); letter-spacing: -0.05em; user-select: none; pointer-events: none; }
+    .section-num--light { color: rgba(255,255,255,0.13); }
+    .section-name { font-family: 'Unbounded', sans-serif; font-weight: 900; font-size: clamp(22px, 3.6vw, 46px); color: var(--text-dark); text-transform: uppercase; letter-spacing: -0.02em; position: relative; z-index: 1; line-height: 1; }
+    .section-name--light { color: #FFFFFF; }
+    .section-content { position: relative; z-index: 1; padding: 36px 60px 64px; }
+    .card { display: block; text-decoration: none; background: var(--surface); border-left: 5px solid var(--sc); padding: 28px 34px; margin-bottom: 16px; transition: background 0.22s ease, border-color 0.22s ease; }
+    .card:hover { background: #222; }
+    .card .card-category { font-family: 'Unbounded', sans-serif; font-weight: 700; font-size: 10px; text-transform: uppercase; letter-spacing: 0.24em; color: var(--sc); margin-bottom: 14px; display: block; }
+    .card .card-headline { font-family: 'DM Serif Display', serif; font-style: italic; font-size: clamp(20px, 2.2vw, 28px); line-height: 1.18; color: #FFFFFF; margin-bottom: 12px; display: block; }
+    .card .card-body { font-family: 'Space Mono', monospace; font-size: 13px; line-height: 1.78; color: #888; }
+    .card .card-meta { font-family: 'Space Mono', monospace; font-size: 11px; color: #555; margin-top: 12px; }
+    footer { padding: 60px; text-align: center; font-family: 'Space Mono', monospace; font-size: 12px; color: #444; }
+    @media (max-width: 900px) {
+      .masthead { padding: 44px 28px 56px; min-height: 280px; }
+      .section-content { padding: 28px 28px 44px; }
+      .section-header-bar { padding: 22px 28px 24px; }
+      .card { padding: 22px 26px; }
+      footer { padding: 40px 28px; }
+    }
+  </style>
 </head>
 <body>
-<div class="container">
-
-  <div class="header">
-    <h1>Art Inspiration</h1>
-    
-    <div class="tagline">Daily creative fuel</div>
-    
-    <div class="date">2026-04-04</div>
+  <header class="masthead">
+    <div class="geo-circle-lg"></div>
+    <div class="geo-circle-outline"></div>
+    <div class="geo-square"></div>
+    <div class="geo-dot"></div>
+    <div class="masthead-content">
+      <div class="masthead-vol">Daily Creative Fuel</div>
+      <h1 class="masthead-title">Art Inspiration</h1>
+      <div class="masthead-digest">Visual Inspiration & Design Intelligence</div>
+      <div class="masthead-date">2026-04-04</div>
+    </div>
+  </header>
+  
+  <div class="color-divider">
+    <span style="background:var(--c1)"></span>
+    <span style="background:var(--c2)"></span>
+    <span style="background:var(--c3)"></span>
+    <span style="background:var(--c4)"></span>
+    <span style="background:var(--c5)"></span>
+    <span style="background:var(--c6)"></span>
   </div>
 
-  
-  
-  <div class="section">
-    <div class="section-title">hyperallergic</div>
+  <main>
     
-    <div class="story">
-      <div class="story-title">
-        <a href="https://hyperallergic.com/salvador-dalis-sublime-faith/" target="_blank" rel="noopener">Salvador Dalí’s Sublime Faith</a>
-      </div>
-      
-      <div class="story-meta">
-        
-        <span class="source-badge">Hyperallergic</span>
-        
-        
-        <span>2026-04-04</span>
-        
-      </div>
-    </div>
     
-    <div class="story">
-      <div class="story-title">
-        <a href="https://hyperallergic.com/salvador-dalis-frustrating-vision-of-the-divine/" target="_blank" rel="noopener">Salvador Dalí’s Frustrating Vision of the Divine</a>
-      </div>
-      
-      <div class="story-meta">
-        
-        <span class="source-badge">Hyperallergic</span>
-        
-        
-        <span>2026-04-04</span>
-        
-      </div>
-    </div>
     
-    <div class="story">
-      <div class="story-title">
-        <a href="https://hyperallergic.com/leah-ki-yi-zhengs-personal-i-ching/" target="_blank" rel="noopener">Leah Ki Yi Zheng’s Personal I Ching</a>
-      </div>
-      
-      <div class="story-meta">
-        
-        <span class="source-badge">Hyperallergic</span>
-        
-        
-        <span>2026-04-04</span>
-        
-      </div>
-    </div>
     
-    <div class="story">
-      <div class="story-title">
-        <a href="https://hyperallergic.com/lebanese-artist-accuses-israel-of-war-crime-for-strike-that-killed-his-parents/" target="_blank" rel="noopener">Lebanese Artist Accuses Israel of War Crime for Strike That Killed His Parents</a>
-      </div>
-      
-      <div class="story-meta">
-        
-        <span class="source-badge">Hyperallergic</span>
-        
-        
-        <span>2026-04-04</span>
-        
-      </div>
-    </div>
     
-  </div>
-  
-  
-  
-  <div class="section">
-    <div class="section-title">colossal</div>
+    <section class="art-section art-section--tinted" style="--sc: var(--c1)">
+      <div class="section-header-bar">
+        <span class="section-num">01</span>
+        <h2 class="section-name">Hyperallergic</h2>
+      </div>
+      <div class="section-content">
+        
+        <a href="https://hyperallergic.com/salvador-dalis-sublime-faith/" class="card" target="_blank" rel="noopener">
+          <span class="card-category">Hyperallergic</span>
+          <span class="card-headline">Salvador Dalí’s Sublime Faith</span>
+          
+        </a>
+        
+        <a href="https://hyperallergic.com/salvador-dalis-frustrating-vision-of-the-divine/" class="card" target="_blank" rel="noopener">
+          <span class="card-category">Hyperallergic</span>
+          <span class="card-headline">Salvador Dalí’s Frustrating Vision of the Divine</span>
+          
+        </a>
+        
+        <a href="https://hyperallergic.com/leah-ki-yi-zhengs-personal-i-ching/" class="card" target="_blank" rel="noopener">
+          <span class="card-category">Hyperallergic</span>
+          <span class="card-headline">Leah Ki Yi Zheng’s Personal I Ching</span>
+          
+        </a>
+        
+        <a href="https://hyperallergic.com/lebanese-artist-accuses-israel-of-war-crime-for-strike-that-killed-his-parents/" class="card" target="_blank" rel="noopener">
+          <span class="card-category">Hyperallergic</span>
+          <span class="card-headline">Lebanese Artist Accuses Israel of War Crime for Strike That Killed His Parents</span>
+          
+        </a>
+        
+      </div>
+    </section>
     
-    <div class="story">
-      <div class="story-title">
-        <a href="https://www.thisiscolossal.com/2026/04/misato-sano-wooden-dog-sculptures/" target="_blank" rel="noopener">Misato Sano’s Charming Wooden Dogs Are Carved With Personality</a>
-      </div>
-      
-      <div class="story-meta">
-        
-        <span class="source-badge">Colossal</span>
-        
-        
-        <span>2026-04-04</span>
-        
-      </div>
-    </div>
     
-    <div class="story">
-      <div class="story-title">
-        <a href="https://www.thisiscolossal.com/2026/04/liza-lou-faq-beaded-paintings/" target="_blank" rel="noopener">Brushstrokes Transform into Beaded Topographies in Liza Lou’s Mixed-Media Paintings</a>
-      </div>
-      
-      <div class="story-meta">
-        
-        <span class="source-badge">Colossal</span>
-        
-        
-        <span>2026-04-04</span>
-        
-      </div>
-    </div>
     
-    <div class="story">
-      <div class="story-title">
-        <a href="https://www.thisiscolossal.com/2026/04/art-uk-digital-database-street-art-murals/" target="_blank" rel="noopener">Explore Art UK’s Digital Database of More Than 6,600 Street Art Murals</a>
-      </div>
-      
-      <div class="story-meta">
-        
-        <span class="source-badge">Colossal</span>
-        
-        
-        <span>2026-04-04</span>
-        
-      </div>
-    </div>
     
-    <div class="story">
-      <div class="story-title">
-        <a href="https://www.thisiscolossal.com/2026/04/astek-wallpapers-eterna-nouveau-murals-interior-design/" target="_blank" rel="noopener">A Line of Mural Wallpapers from Astek Celebrates ‘Eterna Nouveau’</a>
-      </div>
-      
-      <div class="story-meta">
-        
-        <span class="source-badge">Colossal</span>
-        
-        
-        <span>2026-04-04</span>
-        
-      </div>
-    </div>
     
-  </div>
-  
-  
-  
-  
-  
-  <div class="section">
-    <div class="section-title">uxdesign</div>
+    <section class="art-section art-section--tinted" style="--sc: var(--c2)">
+      <div class="section-header-bar">
+        <span class="section-num">02</span>
+        <h2 class="section-name">Colossal</h2>
+      </div>
+      <div class="section-content">
+        
+        <a href="https://www.thisiscolossal.com/2026/04/misato-sano-wooden-dog-sculptures/" class="card" target="_blank" rel="noopener">
+          <span class="card-category">Colossal</span>
+          <span class="card-headline">Misato Sano’s Charming Wooden Dogs Are Carved With Personality</span>
+          
+        </a>
+        
+        <a href="https://www.thisiscolossal.com/2026/04/liza-lou-faq-beaded-paintings/" class="card" target="_blank" rel="noopener">
+          <span class="card-category">Colossal</span>
+          <span class="card-headline">Brushstrokes Transform into Beaded Topographies in Liza Lou’s Mixed-Media Paintings</span>
+          
+        </a>
+        
+        <a href="https://www.thisiscolossal.com/2026/04/art-uk-digital-database-street-art-murals/" class="card" target="_blank" rel="noopener">
+          <span class="card-category">Colossal</span>
+          <span class="card-headline">Explore Art UK’s Digital Database of More Than 6,600 Street Art Murals</span>
+          
+        </a>
+        
+        <a href="https://www.thisiscolossal.com/2026/04/astek-wallpapers-eterna-nouveau-murals-interior-design/" class="card" target="_blank" rel="noopener">
+          <span class="card-category">Colossal</span>
+          <span class="card-headline">A Line of Mural Wallpapers from Astek Celebrates ‘Eterna Nouveau’</span>
+          
+        </a>
+        
+      </div>
+    </section>
     
-    <div class="story">
-      <div class="story-title">
-        <a href="https://uxdesign.cc/designers-we-are-perpetuating-our-own-burnout-problem-6caaa3662f2e?source=rss----138adf9c44c---4" target="_blank" rel="noopener">Designers: We are perpetuating our own burnout problem</a>
-      </div>
-      
-      <div class="story-meta">
-        
-        <span class="source-badge">UX Collective</span>
-        
-        
-        <span>2026-04-04</span>
-        
-      </div>
-    </div>
     
-    <div class="story">
-      <div class="story-title">
-        <a href="https://uxdesign.cc/youre-not-supposed-to-get-it-right-c0c6d7590bc5?source=rss----138adf9c44c---4" target="_blank" rel="noopener">You’re not supposed to get it right</a>
-      </div>
-      
-      <div class="story-meta">
-        
-        <span class="source-badge">UX Collective</span>
-        
-        
-        <span>2026-04-04</span>
-        
-      </div>
-    </div>
     
-    <div class="story">
-      <div class="story-title">
-        <a href="https://uxdesign.cc/falling-apples-and-crumbling-algos-6c51e997cb8e?source=rss----138adf9c44c---4" target="_blank" rel="noopener">Falling apples and crumbling algos</a>
-      </div>
-      
-      <div class="story-meta">
-        
-        <span class="source-badge">UX Collective</span>
-        
-        
-        <span>2026-04-04</span>
-        
-      </div>
-    </div>
     
-    <div class="story">
-      <div class="story-title">
-        <a href="https://uxdesign.cc/do-less-with-ai-f9792b20f838?source=rss----138adf9c44c---4" target="_blank" rel="noopener">Do less with AI</a>
-      </div>
-      
-      <div class="story-meta">
-        
-        <span class="source-badge">UX Collective</span>
-        
-        
-        <span>2026-04-04</span>
-        
-      </div>
-    </div>
     
-  </div>
-  
-  
-  
-  <div class="section">
-    <div class="section-title">abduzeedo</div>
     
-    <div class="story">
-      <div class="story-title">
-        <a href="https://abduzeedo.com/baillat-studio-brand-identity-cortege" target="_blank" rel="noopener">Baillat Studio Brand Identity for The Cortège Uses Only Type</a>
-      </div>
-      
-      <div class="story-meta">
-        
-        <span class="source-badge">Abduzeedo</span>
-        
-        
-        <span>2026-04-04</span>
-        
-      </div>
-    </div>
     
-    <div class="story">
-      <div class="story-title">
-        <a href="https://abduzeedo.com/node/89243" target="_blank" rel="noopener">shadcn/studio: AI Tools for shadcn UI Components</a>
+    <section class="art-section art-section--tinted" style="--sc: var(--c3)">
+      <div class="section-header-bar">
+        <span class="section-num">03</span>
+        <h2 class="section-name">Uxdesign</h2>
       </div>
-      
-      <div class="story-meta">
+      <div class="section-content">
         
-        <span class="source-badge">Abduzeedo</span>
+        <a href="https://uxdesign.cc/designers-we-are-perpetuating-our-own-burnout-problem-6caaa3662f2e?source=rss----138adf9c44c---4" class="card" target="_blank" rel="noopener">
+          <span class="card-category">UX Collective</span>
+          <span class="card-headline">Designers: We are perpetuating our own burnout problem</span>
+          
+        </a>
         
+        <a href="https://uxdesign.cc/youre-not-supposed-to-get-it-right-c0c6d7590bc5?source=rss----138adf9c44c---4" class="card" target="_blank" rel="noopener">
+          <span class="card-category">UX Collective</span>
+          <span class="card-headline">You’re not supposed to get it right</span>
+          
+        </a>
         
-        <span>2026-04-04</span>
+        <a href="https://uxdesign.cc/falling-apples-and-crumbling-algos-6c51e997cb8e?source=rss----138adf9c44c---4" class="card" target="_blank" rel="noopener">
+          <span class="card-category">UX Collective</span>
+          <span class="card-headline">Falling apples and crumbling algos</span>
+          
+        </a>
+        
+        <a href="https://uxdesign.cc/do-less-with-ai-f9792b20f838?source=rss----138adf9c44c---4" class="card" target="_blank" rel="noopener">
+          <span class="card-category">UX Collective</span>
+          <span class="card-headline">Do less with AI</span>
+          
+        </a>
         
       </div>
-    </div>
+    </section>
     
-    <div class="story">
-      <div class="story-title">
-        <a href="https://abduzeedo.com/google-sans-flex-free-font-six-variable-axes-one-file" target="_blank" rel="noopener">Google Sans Flex Free Font: Six Variable Axes, One File</a>
-      </div>
-      
-      <div class="story-meta">
-        
-        <span class="source-badge">Abduzeedo</span>
-        
-        
-        <span>2026-04-04</span>
-        
-      </div>
-    </div>
     
-  </div>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+    
+    
+    
+    <section class="art-section art-section--tinted" style="--sc: var(--c4)">
+      <div class="section-header-bar">
+        <span class="section-num">04</span>
+        <h2 class="section-name">Abduzeedo</h2>
+      </div>
+      <div class="section-content">
+        
+        <a href="https://abduzeedo.com/baillat-studio-brand-identity-cortege" class="card" target="_blank" rel="noopener">
+          <span class="card-category">Abduzeedo</span>
+          <span class="card-headline">Baillat Studio Brand Identity for The Cortège Uses Only Type</span>
+          
+        </a>
+        
+        <a href="https://abduzeedo.com/node/89243" class="card" target="_blank" rel="noopener">
+          <span class="card-category">Abduzeedo</span>
+          <span class="card-headline">shadcn/studio: AI Tools for shadcn UI Components</span>
+          
+        </a>
+        
+        <a href="https://abduzeedo.com/google-sans-flex-free-font-six-variable-axes-one-file" class="card" target="_blank" rel="noopener">
+          <span class="card-category">Abduzeedo</span>
+          <span class="card-headline">Google Sans Flex Free Font: Six Variable Axes, One File</span>
+          
+        </a>
+        
+      </div>
+    </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </main>
 
-  <div class="footer">
-    Built by Pavano &middot; 2026-04-04
-  </div>
-
-</div>
+  <footer>Compiled by Pavano · 2026-04-04</footer>
 </body>
 </html>
